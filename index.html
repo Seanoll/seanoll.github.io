@@ -1,629 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Seanoll">
+    
+    <title>
+        
+        Seanoll
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/dogicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/dogicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/dogicon16.ico">
-  <link rel="mask-icon" href="/images/dog.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"seanoll.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
-
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Seanoll">
-<meta property="og:url" content="http://seanoll.github.io/index.html">
-<meta property="og:site_name" content="Seanoll">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Seanoll">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="http://seanoll.github.io/">
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Seanoll</title>
-  
+    
+        <link rel="shortcut icon" href="/images/dog.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"seanoll.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Seanoll","author":"Seanoll","avatar":"/images/dog2.jpg","logo":null,"favicon":"/images/dog.svg"},"menu":{"home":"/                        || fa-solid fa-home","archives":"/archives            || fa-solid fa-box-archive","tags":"/tags                  || fa-solid fa-tags","about":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":null,"hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/Seanoll","weixin":"img | /images/wechat_qrcode.jpg","qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"bilibili":"https://space.bilibili.com/286960493","email":"s2494122776@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":null,"category":false,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":true,"img_link":"/images/reward.jpg","text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"Seanoll","github_admins":null,"repository":"hexo_site_comments","client_id":"Ov23liMgLERBhzmlK5sZ","client_secret":"6b44453351f4a09534647519641ee66b21a580cd","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2025,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.1"></head>
 
 
+<body>
+<div class="progress-bar-container">
+    
 
-
-
-
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">Seanoll</h1>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Search" role="button">
-    </div>
-  </div>
+    
 </div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-  </ul>
-</nav>
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+        
+<div class="first-screen-container border-box flex-center fade-in-down-animation">
+    <div class="first-screen-content border-box">
+        <div class="top-placeholder border-box"></div>
 
+        <div class="middle-placeholder border-box">
+            
+                <div class="description border-box">
+                    
+                        <div class="desc-item border-box"><span class="desc hitokoto"></span><span class="cursor">｜</span></div>
+                    
+                </div>
+            
 
+            
+                <script async 
+                        src="https://v1.hitokoto.cn/?encode=js"
+                >
+                </script>
+            
+        </div>
 
+        <div class="bottom-placeholder border-box">
+            
+                <div class="sc-icon-list border-box">
+                    <!-- fontawesome icons -->
+                    
+                        
+                            
+                            <div class="tooltip sc-icon-item "
+                                 data-tooltip-content="GitHub"
+                                 
+                                 
+                            >
+                                
+                                    
+                                    
+                                        <a target="_blank" href="https://github.com/Seanoll">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="tooltip sc-icon-item tooltip-img clear"
+                                 data-tooltip-content="WeChat"
+                                 data-tooltip-img-name=weixin
+                                 data-tooltip-img-url=/images/wechat_qrcode.jpg
+                            >
+                                
+                                    
+                                    
+                                        <i class="fab fa-weixin"></i>
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                            <div class="tooltip sc-icon-item "
+                                 data-tooltip-content="bilibili"
+                                 
+                                 
+                            >
+                                
+                                    
+                                    
+                                        <a target="_blank" href="https://space.bilibili.com/286960493">
+                                            <i class="fab fa-bilibili"></i>
+                                        </a>
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="tooltip sc-icon-item "
+                                 data-tooltip-content="Email"
+                                 
+                                 
+                            >
+                                
+                                    <a href="mailto:s2494122776@gmail.com">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                
+                            </div>
+                        
+                    
+
+                    <!-- custom svg icons -->
+                    
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box is-home">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper transparent-1">
+
+    <div class="border-box header-content has-first-screen">
+        <div class="left flex-start border-box">
+            
+            <a class="site-name border-box" href="/">
+               Seanoll
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box active">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                ABOUT
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu active">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
+                                </span>
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            ABOUT
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
 
 </header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="home-content-container fade-in-down-animation">
+    
+    <ul class="home-post-list border-box">
         
-  
-  <aside class="sidebar">
+            <li class="home-post-item">
 
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/">
+                            学习，工作，生活与热爱
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            一个人的行为应该是由他的价值观所决定的，当我们迷茫的时候，我们应该思考一下自己的价值观了。加缪说：“真正严肃的哲学问题只有一个，那就是自杀。”我们为什么还活着，我们真正看重的东西是什么，这就是我们人生的指南针。在大学以前，我的所有行为都是参考网络和身...
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sun Feb 15 2026 16:33:55 GMT+0800"
+                >2026-02-15 16:33:55</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/thinking/">thinking</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2026/02/12/build-blog/">
+                            build_blog
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            环境准备
+安装Node.js
+安装Git
+
+123git -vnode -vnpm -v
+搭建Hexo
+安装Hexo
+
+1npm install -g hexo-cli
+
+初始化博客
+
+1234567# 创建并进入文件夹mkdir my-blogcd...
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Mon Feb 16 2026 17:17:23 GMT+0800"
+                >2026-02-16 17:17:23</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/learning/">learning</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2026/02/12/build-blog/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/1970/01/01/hello-world/">
+                            Hello World
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, yo...
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Thu Feb 12 2026 08:43:43 GMT+0800"
+                >2026-02-12 08:43:43</span>
+            </span>
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/1970/01/01/hello-world/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+    
+
+
+
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2025</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Seanoll</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/">
+            
+            This site is deployed on <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span>
+            
+                </a>
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">Total words</span>
+                    <span class="item-value border-box word">2.5k</span>
+                </span>
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box side-tools-show-handle">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
         </li>
-        <li class="sidebar-nav-overview">
-          Overview
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
         </li>
-      </ul>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
         </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Seanoll"
-      src="/images/dog2.jpg">
-  <p class="site-author-name" itemprop="name">Seanoll</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/seanoll" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;seanoll" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-  <div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
-  </div>
-
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
         </div>
-      </div>
     </div>
-
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://seanoll.github.io/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/dog2.jpg">
-      <meta itemprop="name" content="Seanoll">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/" class="post-title-link" itemprop="url">学习，工作，生活与热爱</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-02-14 23:28:31" itemprop="dateCreated datePublished" datetime="2026-02-14T23:28:31+08:00">2026-02-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-15 16:33:55" itemprop="dateModified" datetime="2026-02-15T16:33:55+08:00">2026-02-15</time>
-    </span>
-
-  
 </div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>一个人的行为应该是由他的价值观所决定的，当我们迷茫的时候，我们应该思考一下自己的价值观了。加缪说：“真正严肃的哲学问题只有一个，那就是自杀。”我们为什么还活着，我们真正看重的东西是什么，这就是我们人生的指南针。<br>在大学以前，我的所有行为都是参考网络和身边观点的局部最优解，但是现在不一样了，现在的观点五花八门，自己没有明确的价值判断标准的时候，就会看哪个都觉得有道理。看完一本书，自认为恍然大悟，后来看到网上的评论说书里的案例都是胡编乱造的，就站到了对立面。因此左右脑互搏，做事情摇摆不定，连自己应该高兴还是伤心都不能确定。<br>人在忙的时候是不会感受到无意义感的，因为这时只会想“忙完这件事，真正的生活就会开始”。然而事实上，真正的生活就是现在，就是忙的时候。</p>
-<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>我曾经想，等我有能力了，我要改革中国的教育制度，让中国的学生生活得更轻松幸福。批评高考、大学教育、原生家庭的文章我已经看了不少了，再看都有点厌倦了，指出问题的人很多，但是我不知道怎么做，这就产生了一种深深的无力感。<br>我曾经想，我学习，应该是因为我热爱知识，并且获得新知识的过程也是快乐的。我喜欢创造，我喜欢用现有的工具设计自己的软件，我喜欢设计车灯，设计零食，布置自己的房间，设计最有性价比的购物选择，但是现在它们可以用人工智能来替代。<br>我选择计算机是因为我喜欢它，但是学得深入之后我才发现我喜欢它的浅显知识和成熟应用的部分，我不喜欢深奥的原理，但是除了它我不知道还能选择什么。学习是为了找工作，我很不愿意承认。<br>竞争激烈的行业总会驱使人没有看清方向就赶快前进，看清方向需要时间，大一进实验室的弊端就是不确定自己是否真的对这个研究方向感兴趣。其实看清了方向也不能保证自己选择的方向就是正确的，无论选择哪条路，都会有一部分不满意的地方，都会美化未选择的路。<br>极致的内卷道路已经被探索出来了，但是我没有那么多的能量，亲人的评价和期待很高，但是他们的话权重不高，躺平也算一条出路，但是社会和亲人还是我心里的一道坎。遵从自己的内心，量力而行，才不会后悔。</p>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>我曾经想，我一定要找一个work-life-balance的工作，但是无奈计算机行业的人太多，我看到的评价都是说工作时间长，强度大。现在，我只想要一个不会失业，相对轻松的工作了。<br>我曾经想，等我有能力了，我要让中国的工人团结起来，用罢工和革命反抗压迫，普及八小时工作制，缩小贫富差距。建筑工地上搬砖的工人、大街上扫地的清洁工和医生老师应该是一样被尊重的，而不是像现在的社会风气一样看不起赚钱少的，这是我眼里的社会主义。我也看过很多反映社会问题的文章或者视频，比如失业、腐败和法律不公，同样地，我也有深深的无力感。<br>我喜欢软件开发，我看到的评价是竞争激烈，晋升难，易失业。如果我在互联网兴起的时候毕业，或者大家不会因为钱而转行，那将是非常幸运的。现在的风口是人工智能，谁都无法预测等到自己毕业的时候风口是什么，随大流总是安心的。普通家庭出身的孩子，没有看透经济的目光，也没有太多的容错空间，如果选择了不好的专业，可能会导致他的收入很低，如果创业失败了，还有可能背负巨额债务，所以随大流是局部最优解。  </p>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>我曾经想，等我有很多钱和很多时间的时候，我要环球旅行，我要看一看世界的多彩，对于高雅的艺术，我可能无法理解，但是我可以用身体感受不同的地方。大概从14岁开始，我不喜欢玩游戏了，游戏的输赢和排名没有什么意义，在固定的规则下完成任务也没有价值。我眼里的游戏已经成为了一种社交的工具，而不是热爱，如果两个人都玩一款游戏，那他们就可以在尴尬的聊天中找到一个难得的共同话题。正如我不能理解过生日的意义。人们非常害怕无聊，所谓的“生活”“休息”和“去玩”只是绞尽脑汁地想出一种逃避无聊和消磨时间的应急措施，或者是遵从本能地寻求单纯的快感，我不认为这是有意义的生活。但是在空闲时间，我也会不知道怎么度过。购物中心已经失去了印象中的吸引力，购买食物和服饰实在是无聊透顶，商场里的娱乐活动也寥寥无几，精神世界匮乏，只有消费主义在弥漫。刷短视频或者打麻将能给予短暂的快感，但是空虚更难忍受。在我眼里，给有需要的人提供实质性的帮助，了解之前从未了解的事物是有价值的生活。所以我愿意做志愿服务，愿意尝试新事物，去博物馆，不过大多是三分钟热度。<br>探索生活的道路永远不会停止，我喜欢的活动也会变，书中给出的观点也各有特色，从事创造性的活动，为理想奉献……</p>
-<h2 id="热爱"><a href="#热爱" class="headerlink" title="热爱"></a>热爱</h2><p>我曾经想，我会终身奉行“追求源于热爱，极致源于梦想”。但是当热爱变成别人强迫自己完成的工作的时候，它可能就不再吸引人了。我想要的，是自由地探索我热爱的领域，如果发现我不喜欢的地方，我就逃避。<br>很多时候，我分不清到底是因为擅长才热爱还是因为热爱才擅长。在热爱的领域里，自己不如别人优秀，不能成为放弃的理由。我不看重钱，我看重价值，做有价值的事，在什么情况下都能做。身体的伤病可以治疗，心理的、社会关系的痛苦可以调节，只要活着，我就有机会做有价值的事，我的生命就有意义。</p>
-
-      
-    </div>
-
-    
-    
     
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/page/home-page.min.js"></script>
+    
+
+    <!-- post page -->
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
 </div>
 
+<!-- mermaid -->
 
 
+<!-- pjax -->
 
-    
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://seanoll.github.io/2026/02/13/%E8%A6%81%E8%B5%B0%E7%BE%A4%E4%BC%97%E8%B7%AF%E7%BA%BF%EF%BC%8C%E4%BD%86%E7%BE%A4%E4%BC%97%E8%BA%AB%E4%B8%8A%E6%9C%89%E9%82%A3%E4%B9%88%E5%A4%9A%E5%8A%A3%E6%A0%B9%E6%80%A7%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/dog2.jpg">
-      <meta itemprop="name" content="Seanoll">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/02/13/%E8%A6%81%E8%B5%B0%E7%BE%A4%E4%BC%97%E8%B7%AF%E7%BA%BF%EF%BC%8C%E4%BD%86%E7%BE%A4%E4%BC%97%E8%BA%AB%E4%B8%8A%E6%9C%89%E9%82%A3%E4%B9%88%E5%A4%9A%E5%8A%A3%E6%A0%B9%E6%80%A7%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F/" class="post-title-link" itemprop="url">要走群众路线，但群众身上有那么多劣根性，怎么办？</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2026-02-13 20:33:24 / Modified: 21:12:25" itemprop="dateCreated datePublished" datetime="2026-02-13T20:33:24+08:00">2026-02-13</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在组织管理与政治实践中，只要深入基层，必然会撞上一堵厚重的现实高墙。</p>
-<p>理论上，我们被反复教导群众路线，到群众中去，从群众中来。但当你真正置身于复杂的现实，你会发现群众的面孔远非想象中那般光辉圣洁。你看到的是一种令人窒息的复杂性：封建迷信思想根深蒂固，资本主义的利己本能无孔不入，短视、盲从、甚至愚昧的现象比比皆是。</p>
-<p>这时候，一个巨大的悖论横亘在所有所有人面前：面对这样一群满身缺点、思想甚至可以说是落后的具体的人，我们能依靠吗？怎么依靠？</p>
-<p>解决这个问题，不能靠文学修辞和道德文章，而是有冷峻的政治逻辑。群众路线之所以被称为屠龙术，不是因为它是一碗道德鸡汤，而是因为它是一套关于权力来源与人的改造的精密科学。</p>
-<h2 id="英雄史观与人民史观"><a href="#英雄史观与人民史观" class="headerlink" title="英雄史观与人民史观"></a>英雄史观与人民史观</h2><p>要解决怎么做的问题，首先要解决怎么看的问题。这不仅仅是定义问题，而是两种截然不同的世界观在根本对立。</p>
-<p>人类历史上，始终存在两种解释历史动力的逻辑：一种是英雄史观（或精英史观），一种是人民史观。</p>
-<p>英雄史观是符合直觉的，也是傲慢的。</p>
-<p>在曹操看来，百姓只是草芥；在西方精英主义者眼中，大众是勒庞笔下的乌合之众。这种史观认为，历史是由极少数天才、帝王、精英创造的。群众只是一个庞大的分母，是背景板，甚至是由于智力低下而必须被少数人驾驭的工具。</p>
-<p>这种观点的诱惑力极大。当你作为一个管理者或先行者，看到周围人的目光短浅时，很难抑制住那种众人皆醉我独醒的优越感。你会下意识地认为：只要我设计好蓝图，群众听令执行就好。</p>
-<p>但历史反复证明，这种逻辑是脆弱的。项羽是极致的英雄，最终乌江自刎；蒋介石拥有一切精英资源，最终败退孤岛。他们失败的根源在于不懂群众之势。</p>
-<p>这就是人民史观的冷酷真相：社会变革的最终力量，不取决于顶层设计的完美程度，而取决于底层共识的广度与深度。</p>
-<p>教员提出人民，只有人民，才是创造世界历史的动力，这并非对群众的盲目吹捧或政治宣传，而是对实实在在的物理力道的客观陈述与皈依。无论精英多么聪明，生产力掌握在群众手里，战争的兵源在群众家里，政权的根基在群众脚下。</p>
-<p>谁要是背离了这个势大力沉的基本盘，注定要被历史的铁拳锤得鼻青脸肿。</p>
-<p>当然，这并不意味着我们要否定精英的作用。恰恰相反，在人民史观的逻辑里，精英肩负着前所未有的重任。</p>
-<p>如果把历史的进程比作一艘巨轮：</p>
-<p>群众是这艘船本身，是船体，是引擎，是承载一切重量的实体。没有船，一切航行都无从谈起。</p>
-<p>精英则是船舵，是罗盘。</p>
-<p>没有船舵，巨轮就会在历史的惊涛骇浪中原地打转，甚至触礁沉没，这正是群众运动往往容易陷入盲目的原因；但如果没有船，船舵不过是一块毫无意义的木头，连出航的资格都没有。</p>
-<p>所以，依靠群众，绝不是否定引导；强调群众主体地位，也绝不是要精英放弃责任。两者的关系是辩证统一的：船舵必须长在船身上，并指引船的方向。</p>
-<h2 id="论人的改造：精英与群众并非物种隔离"><a href="#论人的改造：精英与群众并非物种隔离" class="headerlink" title="论人的改造：精英与群众并非物种隔离"></a>论人的改造：精英与群众并非物种隔离</h2><p>当我们确认了必须依靠群众这一历史唯物主义前提后，那个最扎心的问题依然存在：群众身上严重的封建思想和资本主义习气，难道不会腐蚀我们的事业吗？</p>
-<p>这里涉及到一个更深层的人性拷问。</p>
-<p>许多持精英主义立场的人，潜意识里认为劣根性是群众的专属标签，认为人与人之间存在某种天然的智力与道德隔离。他们认为自己是天生的理性者，而群众是天生的愚昧者。</p>
-<p>这种观点是大错特错的。</p>
-<p>首先，人性的弱点是普遍存在的。 自私、短视、趋利避害、甚至某种程度的盲从，这些不仅存在于群众身上，同样存在于精英身上。知识分子有知识分子的软弱，官僚有官僚的狭隘，商人有商人的贪婪。并没有哪一个阶层是天生免疫人性弱点的圣人。</p>
-<p>还有更关键的一点：精英是如何产生的？</p>
-<p>翻开中国革命史，那些后来运筹帷幄、目光远大的开国将帅，那些坚定的马克思主义者，绝大多数原本也是普通的农民、手工业者或旧军阀的士兵。</p>
-<p>彭德怀元帅出身贫苦农家，早年也曾在旧军队里讨生活；许世友将军在接受红军教育前，也有着浓重的江湖习气。</p>
-<p>他们最初也带有各种旧社会的烙印。但为什么后来他们成为了精英，成为了先锋队？</p>
-<p>因为他们经历了改造。</p>
-<p>是在残酷的斗争实践中，在先进组织的熔炉里，他们剥离了狭隘的小农意识，建立起了宏大的政治视野。</p>
-<p>既然精英可以从旧人脱胎换骨变成新人，那么群众为什么不可以？</p>
-<p>辩证唯物主义告诉我们：社会存在决定社会意识。</p>
-<p>群众身上的封建思想，是因为他们几千年来被禁锢在封建土地关系中；群众身上的资本主义思想，是因为市场经济的丛林法则逼迫他们必须利己才能生存。</p>
-<p>这些落后，不是基因里的缺陷，而是环境与制度诱发的病症。</p>
-<p>所以，走群众路线的本质，包含着一种对人性终极可能性的信仰：我们相信人是可以被改造的。</p>
-<p>同样是那群农民，在晚清是麻木不仁看客，在民国是散兵游勇；但一旦被红军的组织架构所吸纳，一旦被党的纲领和打土豪分田地的口号所唤醒，他们就能在冰天雪地里潜伏几天几夜，就能推着独轮车支援淮海战役。</p>
-<p>人还是那些人，基因没变，血肉没变，但是精神觉悟已经完全不同。</p>
-<p>只要改变了生产关系，只要建立了先进的组织形式，只要进行了有效的政治教育，哪怕是昨天还在求神拜佛的文盲老农，今天就能变成拥有高度阶级觉悟的战士。</p>
-<p>在对人的改造方面，古田会议是彪炳千古的</p>
-<p>红四军建立初期，军队里充满了流寇主义、极端民主化、单纯军事观点等各种非无产阶级思想。这其实就是典型的群众落后性的体现。</p>
-<p>教员没有因为士兵落后就解散队伍，也没有选择只依靠少数军官。而是通过思想建党、政治建军，通过高强度的政治教育和组织生活，硬是将一支以农民为主体的队伍，改造成了具有钢铁意志的无产阶级先锋队。</p>
-<p>依靠群众，依靠的不是他们当下的弱点，而是依靠他们被组织、被唤醒、被改造后的巨大潜能和历史洪流的力量。</p>
-<h2 id="如何改造？"><a href="#如何改造？" class="headerlink" title="如何改造？"></a>如何改造？</h2><p>搞清楚了世界观和可能性，最后才是怎么做。</p>
-<p>如何在依靠群众的同时，有效克服他们身上的封建与资本主义思想？</p>
-<p>在实践中，要警惕两个极端：</p>
-<p>一是命令主义。觉得群众落后，就不屑于解释，直接下指令。这在苏联后期的政治实践中表现明显，结果导致党群关系割裂，最终大厦崩塌时无人救援。</p>
-<p>二是尾巴主义。这是当下互联网时代最容易犯的错误。为了流量或所谓的民意，群众喜欢什么就给什么，群众情绪极端化就跟着极端化。这是放弃了船舵的责任，最终会被狂暴的水流冲毁。</p>
-<p>真正的群众路线，是教员在《关于领导方法的若干问题》中提出的那个那些真知灼见。</p>
-<p>这个过程分为三个严密的步骤，缺一不可：</p>
-<h3 id="第一步：全量输入的从群众中来。"><a href="#第一步：全量输入的从群众中来。" class="headerlink" title="第一步：全量输入的从群众中来。"></a>第一步：全量输入的从群众中来。</h3><p>我们要深入群众，收集意见。这时候，我们收到的必然是混合物：既有群众对生存发展的真实渴望，也有迷信、狭隘、偏激的情绪。</p>
-<p>注意，这一步的关键是诚实。不能因为嫌弃杂质就拒绝原材料。你必须听懂那个想发财的农民背后，是对美好生活的向往；听懂那个抱怨社会不公的愤青背后，是对公平正义的朴素诉求。</p>
-<h3 id="第二步：去伪存真的核心加工。"><a href="#第二步：去伪存真的核心加工。" class="headerlink" title="第二步：去伪存真的核心加工。"></a>第二步：去伪存真的核心加工。</h3><p>这是体现先锋队水平的关键。</p>
-<p>我们要运用马克思主义的立场观点方法，或者现代科学的理性思维，对收集来的材料进行去粗取精，去伪存真，由此及彼，由表及里的改造制作。</p>
-<p>群众想要绝对平均主义（小农平均观），我们不能给，但我们要提炼出反对贫富悬殊的合理内核，制定共同富裕的政策。</p>
-<p>群众想要青天大老爷做主（封建依附观），我们不能做大老爷，但我们要提炼出法治与公正的需求，建立完善的制度体系。</p>
-<p>这一步，就是剥离封建与资本主义的壳，提取出人民根本利益的核。</p>
-<h3 id="第三步：转化输出的到群众中去。"><a href="#第三步：转化输出的到群众中去。" class="headerlink" title="第三步：转化输出的到群众中去。"></a>第三步：转化输出的到群众中去。</h3><p>将提炼好的方针政策，再拿回到群众中去。但不是发一纸文件了事，而是要进行宣传、解释、转化。</p>
-<p>要把高深的理论翻译成群众听得懂的语言，要把长远的利益与群众眼前的实惠结合起来。</p>
-<p>这就不得不提土改中的诉苦运动。</p>
-<p>最初分土地时，很多贫雇农受封建宿命论影响，认为命里注定受穷，不敢拿地主的地。这时候工作队没有强迫命令，而是组织诉苦会。</p>
-<p>让大家互诉苦水，分析穷根。通过这种方式，让群众自己意识到：穷不是因为命不好，而是因为剥削制度。</p>
-<p>这就是把先进的阶级理论，转化成了群众自己的觉悟。一旦觉悟被唤醒，封建思想的枷锁就被砸碎了，爆发出的就是保卫胜利果实的无穷力量。</p>
-<h2 id="不仅是方法论，更是世界观"><a href="#不仅是方法论，更是世界观" class="headerlink" title="不仅是方法论，更是世界观"></a>不仅是方法论，更是世界观</h2><p>群众路线首先不仅是一个方法论问题，更含有一个世界观问题。</p>
-<p>它要求我们必须具备彻底的唯物主义勇气，敢于承认并面对现实的不完美，实事求是；同时具备坚定的革命乐观主义精神，相信任何普通人通过改造都能迸发出改天换地的力量。</p>
-<p>所谓的屠龙术，不是你手里有一把无坚不摧的利剑去单挑恶龙。</p>
-<p>而是你有能力，让千千万万的人，即使手里拿着锄头，哪怕他们昨天还胆小怕事、满腹牢骚，但今天，他们能在你的组织和感召下，自觉地站在一起，挥向那条看似不可战胜的恶龙。</p>
-<p>从一盘散沙到钢铁洪流，中间的那个魔法，就叫群众路线！</p>
-<p>原文：要走群众路线，但群众身上有那么多劣根性，怎么办？ - 小岚的文章 - 知乎<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/1988602960712840061">https://zhuanlan.zhihu.com/p/1988602960712840061</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://seanoll.github.io/2026/02/12/build-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/dog2.jpg">
-      <meta itemprop="name" content="Seanoll">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/02/12/build-blog/" class="post-title-link" itemprop="url">build_blog</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-02-12 12:00:32" itemprop="dateCreated datePublished" datetime="2026-02-12T12:00:32+08:00">2026-02-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-13 22:23:58" itemprop="dateModified" datetime="2026-02-13T22:23:58+08:00">2026-02-13</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li><p>环境准备</p>
-<ul>
-<li>安装Node.js</li>
-<li>安装Git</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">      git -v</span><br><span class="line">      node -v</span><br><span class="line">      npm -v</span><br><span class="line">   ```      </span><br><span class="line"></span><br><span class="line">2. 搭建Hexo</span><br><span class="line">   - 安装Hexo    </span><br><span class="line">   ~~~bash  </span><br><span class="line">      npm install -g hexo-cli</span><br><span class="line">   ~~~  </span><br><span class="line"></span><br><span class="line">   - 初始化博客   </span><br><span class="line">   ```bash</span><br><span class="line">      <span class="comment"># 创建并进入文件夹</span></span><br><span class="line">      <span class="built_in">mkdir</span> my-blog</span><br><span class="line">      <span class="built_in">cd</span> my-blog</span><br><span class="line">      <span class="comment"># 初始化 Hexo</span></span><br><span class="line">      hexo init</span><br><span class="line">      <span class="comment"># 安装依赖包</span></span><br><span class="line">      npm install</span><br><span class="line">   ```   </span><br><span class="line"></span><br><span class="line">   - 本地预览  </span><br><span class="line">   ```bash</span><br><span class="line">      hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署到Github Pages</p>
-<ul>
-<li>创建Github仓库，名字为：你的Github用户名.github.io</li>
-<li>配置Hexo部署信息，打开本地博客根目录下的 _config.yml文件，找到最底部的 deploy字段</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment"># Deployment</span></span><br><span class="line">   <span class="attr">deploy:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">      <span class="attr">repo:</span> <span class="string">git@github.com:Seanoll/seanoll.github.io.git</span></span><br><span class="line">      <span class="comment"># ssh连接比http快，也可用：</span></span><br><span class="line">      <span class="comment"># repo: https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git</span></span><br><span class="line">      <span class="attr">branch:</span> <span class="string">master</span> </span><br><span class="line"> <span class="string">```</span>  </span><br><span class="line"><span class="bullet">-</span> <span class="string">安装部署插件</span>  </span><br><span class="line"><span class="string">```bash</span></span><br><span class="line"> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-deployer-git</span> <span class="string">--save</span></span><br><span class="line"> <span class="string">hexo</span> <span class="string">d</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>回到Github仓库页面，点击Settings -&gt; Pages， 在 Source下拉菜单中，选择 Deploy from a branch，然后选择刚才配置的分支（如 main或 master），点击 Save</li>
-</ul>
-</li>
-<li><p>内容</p>
-<ul>
-<li>在Hexo官网或者Github上找主题，下载到themes文件夹或者<code>git clone</code> </li>
-<li>在博客根目录下的_config.yml中下拉找到theme改为<code>theme: 什么名字</code></li>
-<li>在主题的source文件夹里修改配置文件</li>
-<li>使用<code>hexo new 文章名</code>来新建一篇文章，找到并编辑它，写好之后保存</li>
-<li>使用<code>hexo new page 网页名</code>来新建一张页面</li>
-<li>使用<code>hexo g</code>来生成相应的文件，使用<code>hexo d</code>部署更新到网站上</li>
-</ul>
-</li>
-<li><p>在配置过程中出现版本问题</p>
-<ul>
-<li>在命令行里无法删除一个文件夹<code>Permission Denied</code>可能是因为该文件夹在图形化界面中打开。</li>
-<li><code>hexo init</code>必须初始化一个空文件夹，如果已经删干净了还是提示有文件，使用<code>ls -a</code>来查看隐藏文件并删除。 </li>
-<li><code>git clone</code>或者<code>wget</code>和<code>curl</code>速度太慢时，将网络代理设置成全局模式。</li>
-<li>在 YAML 中，冒号 :后面必须有一个空格。<code>branch:master</code>应该写为 <code>branch: master</code>。非末尾的后大括号后面需要加逗号,。</li>
-<li>安装新版nodejs：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 nvm（如果还没安装）</span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重新打开终端，然后安装 Node.js 20</span></span><br><span class="line">nvm install 20</span><br><span class="line">nvm use 20</span><br><span class="line"><span class="comment"># 设置为默认版本</span></span><br><span class="line">nvm <span class="built_in">alias</span> default 20</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 验证版本</span></span><br><span class="line">node -v  <span class="comment"># 应该显示 20.x.x </span></span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://seanoll.github.io/1970/01/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/dog2.jpg">
-      <meta itemprop="name" content="Seanoll">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Seanoll">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/1970/01/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 1970-01-01 08:00:00" itemprop="dateCreated datePublished" datetime="1970-01-01T08:00:00+08:00">1970-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-12 08:43:43" itemprop="dateModified" datetime="2026-02-12T08:43:43+08:00">2026-02-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2026</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Seanoll</span>
-  </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
 </body>
 </html>
