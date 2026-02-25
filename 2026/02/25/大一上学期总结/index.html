@@ -9,7 +9,7 @@
     
     <title>
         
-            build_blog |
+            大一上学期总结 |
         
         Seanoll
     </title>
@@ -223,7 +223,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        build_blog
+                        大一上学期总结
                     </div>
                 
 
@@ -249,13 +249,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-02-12 12:00:32</span>
+                <span class="datetime">2026-02-25 15:36:28</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Mon Feb 16 2026 17:17:23 GMT+0800">2026-02-16 17:17:23</span>
+                    <span class="datetime" data-updated="Wed Feb 25 2026 17:14:19 GMT+0800">2026-02-25 17:14:19</span>
                 </span>
             
         
@@ -266,7 +266,10 @@
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/learning/">learning</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/thinking/">thinking</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/summary/">summary</a></li>
                         
                     
                 </ul>
@@ -276,12 +279,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>574 Words</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.1k Words</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>3 Mins</span>
             </span>
         
         
@@ -303,51 +306,16 @@
                     
 
                     
-                         <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>安装Node.js</li>
-<li>安装Git</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git -v</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><ul>
-<li>安装Hexo</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<ul>
-<li>初始化博客</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建并进入文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line"><span class="comment"># 初始化 Hexo</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<ul>
-<li>本地预览</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><ul>
-<li>创建Github仓库，名字为：你的Github用户名.github.io</li>
-<li>配置Hexo部署信息，打开本地博客根目录下的 _config.yml文件，找到最底部的 deploy字段</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">   <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">   <span class="attr">repo:</span> <span class="string">git@github.com:Seanoll/seanoll.github.io.git</span></span><br><span class="line">   <span class="comment"># ssh连接比http快，也可用：</span></span><br><span class="line">   <span class="comment"># repo: https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git</span></span><br><span class="line">   <span class="attr">branch:</span> <span class="string">master</span> </span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装部署插件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<ul>
-<li>回到Github仓库页面，点击Settings -&gt; Pages， 在 Source下拉菜单中，选择 Deploy from a branch，然后选择刚才配置的分支（如 main或 master），点击 Save</li>
-</ul>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ul>
-<li>在Hexo官网或者Github上找主题，下载到themes文件夹或者<code>git clone</code> </li>
-<li>在博客根目录下的_config.yml中下拉找到theme改为<code>theme: 什么名字</code></li>
-<li>在主题的source文件夹里修改配置文件</li>
-<li>使用<code>hexo new 文章名</code>来新建一篇文章，找到并编辑它，写好之后保存</li>
-<li>使用<code>hexo new page 网页名</code>来新建一张页面</li>
-<li>使用<code>hexo g</code>来生成相应的文件，使用<code>hexo d</code>部署更新到网站上</li>
-</ul>
-<h2 id="在配置过程中出现版本问题"><a href="#在配置过程中出现版本问题" class="headerlink" title="在配置过程中出现版本问题"></a>在配置过程中出现版本问题</h2><ul>
-<li>在命令行里无法删除一个文件夹<code>Permission Denied</code>可能是因为该文件夹在图形化界面中打开。</li>
-<li><code>hexo init</code>必须初始化一个空文件夹，如果已经删干净了还是提示有文件，使用<code>ls -a</code>来查看隐藏文件并删除。 </li>
-<li><code>git clone</code>或者<code>wget</code>和<code>curl</code>速度太慢时，将网络代理设置成全局模式。</li>
-<li>在 YAML 中，冒号 :后面必须有一个空格。<code>branch:master</code>应该写为 <code>branch: master</code>。非末尾的后大括号后面需要加逗号,。</li>
-<li>安装新版nodejs：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 nvm（如果还没安装）</span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重新打开终端，然后安装 Node.js 20</span></span><br><span class="line">nvm install 20</span><br><span class="line">nvm use 20</span><br><span class="line"><span class="comment"># 设置为默认版本</span></span><br><span class="line">nvm <span class="built_in">alias</span> default 20</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 验证版本</span></span><br><span class="line">node -v  <span class="comment"># 应该显示 20.x.x </span></span><br></pre></td></tr></table></figure>
+                         <p>高考过去之后，回望高中三年，当时的无比焦虑，现在看来却微不足道。择校，与挑选数码产品是一样的，都是在自己的预算下选择性价比最高的选项。</p>
+<p>查分的时候，不得不承认还是有点失望的，毕竟数学考得不好。纠结了很长时间，最终还是把中山大学排在了北邮的前面，我就这样一分都没有浪费地来到了遥远的广州。</p>
+<p>“试问岭南应不好，却道：此心安处是吾乡。”</p>
+<h2 id="迷茫"><a href="#迷茫" class="headerlink" title="迷茫"></a>迷茫</h2><p>从小到大，我都被管得很紧，没有自己出过远门。在和父母分别的时候，我忍不住流眼泪了。我不知道自己该如何生活，也担心会把事情搞砸。曾经看过那么多批评原生家庭和断亲的文章，对于一个缺乏安全感又敏感的人来说，也是徒劳的。</p>
+<p>高中的时候，我很少给家里人打电话，在大学里，我也不知道什么时候给家里人打电话，打了电话也不知道该说些什么。亲密关系这一块，我没大有自己的理解。有人能自然地开启话题，招待客人和结交朋友，虽然高中时大家都喜欢我，但大多数都是别人主动认识我。到了大学，生活更加原子化，维持关系也更难，很多人只是打个招呼，便再无话说，我渴望拥有更多朋友，和外向的人一起玩，但是一直找不到方法，不知道聊什么，也没有足够的勇气。</p>
+<p>我也没能理解谈恋爱这件事，虽然我的生物本能对异性产生好感，但是我不知道怎么做。大学之前虽然被别人表白过，但是从未真正进入一段感情。难道谈恋爱就是聊天、看电影、吃饭或者其他无聊的事情吗？我挺认同在网上看到的一句话：即使什么都不做，也想待在一起，这样去见对方的行为才叫约会；在“见面时要做什么”成为问题的那瞬间，其实我们的约会就已经结束了。类似地，我觉得送礼物也是如此，我看到一样东西，自然就会想送给你，不会在乎是否是节日或者纪念日，如果我绞尽脑汁地想给你送什么礼物才能让你开心，那就成为一种刻意的讨好了。不过，如果是你主动提出想要的东西，那也是挺好的。</p>
+<p>我本来以为中山大学在广东省的录取人数多，在广东上中山大学就会很容易，没想到这里大佬云集。有人初中就研究Linux，有人大一就打到ACM金牌，差距这么大我只能无奈地接受。我一直在思考未来的方向，每一个B站课程都浅尝辄止，焦虑研究方向感不感兴趣，焦虑未来的就业情况，但是未来谁也说不清楚。就像这句话：过度考察的人生是没法过的人生。当我们过度关注每一个细节，反而可能失去了生活的乐趣和方向。这种学习方式，还不如深耕一个领域，在分界点的时候再去思考怎么办，总不可能饿死吧。</p>
+<h2 id="途中"><a href="#途中" class="headerlink" title="途中"></a>途中</h2><p>大一上学期，我渐渐加快写作业速度，几乎每天都去教室里自习。最后绩点4.031，至少是有些成果的。而且认识了一些朋友，虽然不多，但是起码让我感到不那么孤独了。空闲时间自己一个人溜达，我喜欢热闹的氛围却不知道怎么融入其中，表面的繁华最终也是无意义。想去找高中同学却没有人带我入校，社团和团委的成员也没有形成很熟的关系。</p>
+<p>不过把自己照顾得还不错吧，没有吃什么大餐，但是有吃水果，没有激动人心的经历，但是把所有东西都清理得很干净，睡得还行，也没有生什么大病。下学期去实验室实习，空闲时间起码有事做了。</p>
+<p>祝你我前程似锦，未来可期。</p>
 
                     
                 </div>
@@ -358,11 +326,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                build_blog
+                大一上学期总结
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2026/02/12/build-blog/
+                2026/02/25/大一上学期总结/
             </div>
         </div>
 
@@ -378,7 +346,7 @@
                 <div class="type">
                     Published
                 </div>
-                <div class="content">2026-02-12 12:00</div>
+                <div class="content">2026-02-25 15:36</div>
             </div>
 
 
@@ -414,7 +382,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/learning/">learning</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/thinking/">thinking</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/summary/">summary</a>
                                     </li>
                                 
                             </ul>
@@ -453,31 +425,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/"
-                                   title="学习，工作，生活与热爱"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">学习，工作，生活与热爱</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/1970/01/01/hello-world/"
-                                   title="Hello World"
+                                   href="/2026/02/24/3D-Gaussian-Splatting%E7%AC%94%E8%AE%B0/"
+                                   title="3D_Gaussian_Splatting笔记"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-title-item text-ellipsis">3D_Gaussian_Splatting笔记</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -606,7 +562,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%B7%E8%8C%AB"><span class="nav-text">迷茫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%94%E4%B8%AD"><span class="nav-text">途中</span></a></li></ol>
     </div>
 </div>
 
@@ -809,7 +765,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%B7%E8%8C%AB"><span class="nav-text">迷茫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%94%E4%B8%AD"><span class="nav-text">途中</span></a></li></ol>
     </div>
 </div>
 
