@@ -367,7 +367,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Fri Mar 06 2026 11:29:59 GMT+0800">2026-03-06 11:29:59</span>
+                    <span class="datetime" data-updated="Sat Mar 14 2026 11:54:07 GMT+0800">2026-03-14 11:54:07</span>
                 </span>
             
         
@@ -586,13 +586,15 @@ mjx-container[display="true"] + br {
 <li>输入<code>nvcc --version</code>检测已经安装CUDA SDK 11</li>
 <li>输入<code>cd gaussian-splatting</code>然后执行<code>conda env create --file environment.yml</code></li>
 <li>这一步可能因为网络问题而失败。</li>
-<li>用<code>colmap -h</code>检测有没有COLMAP，如果没有，安装COLMAP，<code>sudo apt update</code>和<code>sudo apt install colmap</code></li>
+<li>用<code>colmap -h</code>检测有没有COLMAP，如果没有，安装COLMAP，<code>sudo apt update</code>和<code>sudo apt install colmap</code>（这一步可能有版本不兼容的问题，暂时没有想到解决方法）</li>
+<li>首次使用需要<code>conda init bash</code>，再<code>conda activate gaussian_splatting</code></li>
 </ul>
 <h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><ul>
 <li>用FileZilla连接服务器(sftp)</li>
 <li>在gaussian_splatting下创建存放训练数据的文件夹，在文件夹里创建一个项目的文件夹，然后创建input文件夹</li>
 <li>把拍的照片用FileZilla放到input里</li>
 <li>返回gaussian_splatting，执行<code>python convert.py -s &lt;location&gt;</code>，location是input的父文件夹，这一步完成了COLMAP初始化稀疏点云</li>
+<li>遇到<code>qt.qpa.xcb: could not connect to display</code>问题我也不知道该怎么解决了，于是直接社区镜像</li>
 <li>执行<code>python train.py -s &lt;location&gt;</code>，这一步完成了训练</li>
 <li>在output文件夹下可以找到point_cloud.ply，一个是7000次训练，一个是30000次训练。</li>
 <li>使用supersplat - 导入ply文件查看，如果遇到权限不足的情况，在wsl里执行<code>chmod 777 文件名</code>，拖进去就行</li>
@@ -901,7 +903,7 @@ mjx-container[display="true"] + br {
             
                 <span class="count-item border-box word">
                     <span class="item-type border-box">Total words</span>
-                    <span class="item-value border-box word">6.8k</span>
+                    <span class="item-value border-box word">7.4k</span>
                 </span>
             
 
