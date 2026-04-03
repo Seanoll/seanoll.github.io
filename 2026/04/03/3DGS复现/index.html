@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            3DGS复现 |
         
         Seanoll
     </title>
@@ -223,7 +223,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Hello World
+                        3DGS复现
                     </div>
                 
 
@@ -249,17 +249,26 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">1970-01-01 08:00:00</span>
+                <span class="datetime">2026-04-03 13:59:00</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Feb 12 2026 08:43:43 GMT+0800">2026-02-12 08:43:43</span>
+                    <span class="datetime" data-updated="Fri Apr 03 2026 13:59:57 GMT+0800">2026-04-03 13:59:57</span>
                 </span>
             
         
 
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/learning/">learning</a></li>
+                        
+                    
+                </ul>
+            </span>
         
 
         
@@ -267,7 +276,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>75 Words</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>409 Words</span>
             </span>
         
         
@@ -294,19 +303,40 @@
                     
 
                     
-                         <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+                         <h2 id="连接云服务器"><a href="#连接云服务器" class="headerlink" title="连接云服务器"></a>连接云服务器</h2><ol>
+<li>在AutoDL里租一台RTX 3090的服务器，选择基础环境：MiniConda Conda3 Python3.10 Ubuntu22.04 CUDA11.8</li>
+<li>在VS Code里按Ctrl + Shift + P，输入Remote-SSH，选择Add…，添加远程主机。</li>
+<li>在AutoDL里复制登录命令和密码，在VS Code里相应地输入</li>
+</ol>
+<h2 id="连接SSH"><a href="#连接SSH" class="headerlink" title="连接SSH"></a>连接SSH</h2><ol>
+<li>检查是否安装Git：<code>git --version</code></li>
+<li>生成密钥：<code>ssh-keygen -t ed25519 -C &quot;email@example.com&quot;</code></li>
+<li>复制密钥：<code>cat ~/.ssh/id_ed25519.pub</code></li>
+<li>在Github上的SSH里添加New SSH Key</li>
+</ol>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ol>
+<li>克隆：<code>git clone git@github.com:graphdeco-inria/gaussian-splatting.git --recursive</code></li>
+<li>检查是否安装CUDA：<code>nvcc --version</code></li>
+<li>切换目录：<code>cd gaussian-splatting</code></li>
+<li>换清华源：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 添加清华源的 channels (对应 defaults, conda-forge, pytorch)</span></span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 设置显示源地址（方便调试）</span></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 清理旧缓存（非常重要，否则可能还在用旧的慢速索引）</span></span><br><span class="line">conda clean -i</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>用mamba：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda install -n base -c conda-forge mamba</span><br><span class="line"></span><br><span class="line">mamba <span class="built_in">env</span> create -f environment.yml</span><br></pre></td></tr></table></figure>
+<h2 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h2><ol>
+<li>安装COLMAP：<code>sudo apt update &amp;&amp; sudo apt install colmap</code></li>
+<li>检测COLMAP：<code>colmap -h</code></li>
+<li>连接FileZilla：协议SFTP，主机即SSH命令，输入对应的密码</li>
+<li>在gaussian_splatting下创建存放训练数据的文件夹，在文件夹里创建一个项目的文件夹，然后创建input文件夹。把拍的照片用FileZilla放到input里。</li>
+<li>虚拟显示：<code>sudo apt update &amp;&amp; sudo apt install xvfb -y</code></li>
+<li>转换：<code>xvfb-run -a python convert.py -s ./data/truck/</code></li>
+</ol>
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><ol>
+<li>训练：<code>python train.py -s ./data/train</code></li>
+<li>在output文件夹里得到结果</li>
+</ol>
 
                     
                 </div>
@@ -317,11 +347,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                Hello World
+                3DGS复现
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                1970/01/01/hello-world/
+                2026/04/03/3DGS复现/
             </div>
         </div>
 
@@ -337,7 +367,7 @@
                 <div class="type">
                     Published
                 </div>
-                <div class="content">1970-01-01 08:00</div>
+                <div class="content">2026-04-03 13:59</div>
             </div>
 
 
@@ -404,22 +434,22 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/02/12/build-blog/"
-                                   title="build_blog"
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/03/14/%E8%88%8D%E5%8F%8B%E6%89%93%E5%91%BC%E5%99%9C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F/"
+                                   title="舍友打呼噜怎么办？"
                                 >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">build_blog</span>
-                                        <span class="post-nav-item">Prev posts</span>
+                                        <span class="post-nav-title-item text-ellipsis">舍友打呼噜怎么办？</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                        
                         
                     </div>
                 
@@ -541,7 +571,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">连接云服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5SSH"><span class="nav-text">连接SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83"><span class="nav-text">训练</span></a></li></ol>
     </div>
 </div>
 
@@ -744,7 +774,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">连接云服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5SSH"><span class="nav-text">连接SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2"><span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83"><span class="nav-text">训练</span></a></li></ol>
     </div>
 </div>
 
