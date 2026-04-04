@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Seanoll">
+    
+    <title>
+        
+            3DGS代码解读 |
+        
+        Seanoll
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/dog.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"seanoll.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Seanoll","author":"Seanoll","avatar":"/images/dog2.jpg","logo":null,"favicon":"/images/dog.svg"},"menu":{"home":"/                        || fa-solid fa-home","archives":"/archives            || fa-solid fa-box-archive","categories":"/categories      || fa-solid fa-layer-group","about":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":null,"hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/Seanoll","weixin":"img | /images/wechat_qrcode.jpg","qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"bilibili":"https://space.bilibili.com/286960493","email":"s2494122776@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":null,"category":true,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":false,"img_link":"/images/reward.jpg","text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"giscus","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"Seanoll","github_admins":null,"repository":"hexo_site_comments","client_id":"Ov23liMgLERBhzmlK5sZ","client_secret":"6b44453351f4a09534647519641ee66b21a580cd","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":"Seanoll/hexo_site_comments","repo_id":"R_kgDORRWq5g","category":"Announcements","category_id":"DIC_kwDORRWq5s4C2oDI","reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2025,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"mathjax":{"tags":"none","single_dollars":true,"cjk_width":0.9,"normal_width":0.6,"append_css":true,"every_page":false},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+            <a class="site-name border-box" href="/">
+               Seanoll
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                ABOUT
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            ABOUT
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        3DGS代码解读
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/dog2.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Seanoll</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-04-04 15:49:57</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Sat Apr 04 2026 15:52:19 GMT+0800">2026-04-04 15:52:19</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/learning/">learning</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3k Words</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>13 Mins</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h1><h2 id="命令行参数：ArgumentParser"><a href="#命令行参数：ArgumentParser" class="headerlink" title="命令行参数：ArgumentParser"></a>命令行参数：ArgumentParser</h2><p><code>ArgumentParser</code> 是 Python 标准库 <code>argparse</code> 模块中的核心类，用于轻松编写用户友好的命令行接口。它的主要功能是解析命令行参数，使你的 Python 脚本能够接收外部输入，从而实现灵活配置。</p>
+<h3 id="核心工作流程"><a href="#核心工作流程" class="headerlink" title="核心工作流程"></a>核心工作流程</h3><p>使用 <code>ArgumentParser</code> 通常遵循以下三个步骤：</p>
+<ol>
+<li><p><strong>创建解析器 (Create the parser)</strong><br>首先，你需要创建一个 <code>ArgumentParser</code> 对象。这个对象将保存所有解析命令行参数所需的信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个解析器实例，并添加描述信息</span></span><br><span class="line">parser = argparse.ArgumentParser(description=<span class="string">&#x27;这是一个用于处理文件的工具&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>添加参数 (Add arguments)</strong><br>接下来，通过调用 <code>add_argument()</code> 方法来告诉解析器，你的程序需要接收哪些命令行参数。你可以定义参数的名称、类型、默认值、帮助信息等。</p>
+<ul>
+<li><strong>位置参数 (Positional Arguments):</strong> 必须提供的参数，根据它们在命令行中的位置来确定。</li>
+<li><strong>可选参数 (Optional Arguments):</strong> 以 <code>-</code> 或 <code>--</code> 开头的参数，通常有默认值，是可选的。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加一个位置参数 &#x27;filename&#x27;</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;filename&#x27;</span>, <span class="built_in">help</span>=<span class="string">&#x27;要处理的文件名&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加一个可选参数 &#x27;--verbose&#x27;，它是一个开关，如果提供则为 True</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-v&#x27;</span>, <span class="string">&#x27;--verbose&#x27;</span>, action=<span class="string">&#x27;store_true&#x27;</span>, <span class="built_in">help</span>=<span class="string">&#x27;启用详细输出模式&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加一个带类型的可选参数 &#x27;--count&#x27;，默认为 1</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--count&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, default=<span class="number">1</span>, <span class="built_in">help</span>=<span class="string">&#x27;处理次数&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="type"><a href="#type" class="headerlink" title="type"></a><code>type</code></h4><p>指定该参数应该被转换成的数据类型。</p>
+<ul>
+<li><strong>默认</strong>：字符串 (<code>str</code>)。</li>
+<li><strong>常用</strong>：<code>int</code>, <code>float</code>, <code>bool</code>（注意：bool类型通常配合 <code>action</code> 使用，直接设 <code>type=bool</code> 可能会有坑）。</li>
+<li><strong>作用</strong>：如果用户输入了错误类型（比如输入了字母但要求是数字），程序会自动报错并提示。</li>
+</ul>
+<h4 id="default"><a href="#default" class="headerlink" title="default"></a><code>default</code></h4><p>如果命令行中<strong>没有</strong>提供该参数，变量将取这个值。</p>
+<ul>
+<li><strong>场景</strong>：比如 <code>--ip</code> 参数，默认是 <code>127.0.0.1</code>，如果你不特意去改它，程序就用本地地址。</li>
+</ul>
+<h4 id="help"><a href="#help" class="headerlink" title="help"></a><code>help</code></h4><p>一个描述性的字符串，解释这个参数是做什么的。</p>
+<ul>
+<li><strong>作用</strong>：当用户在命令行输入 <code>python script.py -h</code> 或 <code>--help</code> 时，这段文字会显示出来，帮助用户了解如何使用程序。</li>
+</ul>
+<h4 id="action"><a href="#action" class="headerlink" title="action"></a><code>action</code></h4><p>指定当参数在命令行中出现时，应该采取什么动作。最常用的有两个：</p>
+<ul>
+<li><strong><code>store</code></strong>（默认）：保存参数的值。例如 <code>--count 5</code>，就把 <code>5</code> 存起来。</li>
+<li><strong><code>store_true</code></strong> &#x2F; <strong><code>store_false</code></strong>：这是一个开关。</li>
+<li>如果你定义 <code>parser.add_argument(&#39;--debug&#39;, action=&#39;store_true&#39;)</code>。</li>
+<li>默认情况下，<code>debug</code> 是 <code>False</code>。</li>
+<li>如果你在命令行里写了 <code>--debug</code>，它的值就变成了 <code>True</code>。这非常适合用来控制是否开启某种模式（如调试模式、静默模式）。</li>
+</ul>
+<h4 id="nargs"><a href="#nargs" class="headerlink" title="nargs"></a><code>nargs</code></h4><p>指定应该读取多少个命令行参数。</p>
+<ul>
+<li><strong><code>?</code></strong>：0个或1个。</li>
+<li><strong><code>*</code></strong>：所有剩余的参数放入一个列表。</li>
+<li><strong><code>+</code></strong>：至少一个，剩余的放入一个列表。</li>
+<li><strong>数字</strong>：例如 <code>2</code>，表示需要紧跟两个数值（常用于坐标 <code>x, y</code>）。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 示例代码</span></span><br><span class="line">parser.add_argument(</span><br><span class="line">    <span class="string">&quot;--detect_anomaly&quot;</span>,  <span class="comment"># 1. 参数名：在命令行输入 --detect_anomaly</span></span><br><span class="line">    action=<span class="string">&quot;store_true&quot;</span>, <span class="comment"># 2. 动作：这是一个开关。写了就是True，不写就是False</span></span><br><span class="line">    default=<span class="literal">False</span>,       <span class="comment"># 3. 默认值：默认不开启</span></span><br><span class="line">    <span class="built_in">help</span>=<span class="string">&quot;Set debug mode&quot;</span> <span class="comment"># 4. 帮助信息：解释它是干嘛的</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行效果：</strong></p>
+<ul>
+<li><strong>情况 A</strong>：你直接运行 <code>python train.py</code></li>
+<li><code>args.detect_anomaly</code> 的值是 <strong><code>False</code></strong>。</li>
+<li><strong>情况 B</strong>：你运行 <code>python train.py --detect_anomaly</code></li>
+<li><code>args.detect_anomaly</code> 的值是 <strong><code>True</code></strong>。</li>
+</ul>
+<p>这就是 <code>add_argument</code> 的核心逻辑：<strong>定义规则，自动解析，赋值给变量。</strong></p>
+</li>
+<li><p><strong>解析参数 (Parse the arguments)</strong><br>最后，调用 <code>parse_args()</code> 方法。它会读取命令行输入（例如 <code>python script.py myfile.txt -v --count 3</code>），进行解析，并返回一个包含所有参数值的对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解析命令行参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过属性访问解析出的参数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;文件名: <span class="subst">&#123;args.filename&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;详细模式: <span class="subst">&#123;args.verbose&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;处理次数: <span class="subst">&#123;args.count&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="核心优势"><a href="#核心优势" class="headerlink" title="核心优势"></a>核心优势</h3><ul>
+<li><strong>自动生成帮助信息:</strong> 当你运行脚本并加上 <code>-h</code> 或 <code>--help</code> 参数时，<code>argparse</code> 会自动生成一个格式美观的帮助文档，列出所有可用参数及其说明。</li>
+<li><strong>类型检查与转换:</strong> 它可以根据你设置的 <code>type</code> 参数自动将命令行输入的字符串转换为整数、浮点数等，并在类型不匹配时给出清晰的错误提示。</li>
+<li><strong>处理默认值:</strong> 为可选参数设置默认值，简化了用户的使用。</li>
+<li><strong>错误处理:</strong> 当用户提供了无效的参数或缺少必需的参数时，它会自动退出程序并显示错误信息。</li>
+</ul>
+<p>总而言之，<code>ArgumentParser</code> 是构建专业、易用的命令行工具的标准方式，它极大地简化了参数处理逻辑，并提升了用户体验。</p>
+<h2 id="forward"><a href="#forward" class="headerlink" title="forward"></a>forward</h2><h3 id="预处理：preprocess"><a href="#预处理：preprocess" class="headerlink" title="预处理：preprocess"></a>预处理：preprocess</h3><h4 id="视锥剔除：in-frustum"><a href="#视锥剔除：in-frustum" class="headerlink" title="视锥剔除：in_frustum"></a>视锥剔除：in_frustum</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">float4 p_hom = <span class="built_in">transformPoint4x4</span>(p_orig, projmatrix);</span><br><span class="line"><span class="type">float</span> p_w = <span class="number">1.0f</span> / (p_hom.w + <span class="number">0.0000001f</span>);</span><br><span class="line">float3 p_proj = &#123; p_hom.x * p_w, p_hom.y * p_w, p_hom.z * p_w &#125;;</span><br><span class="line">p_view = <span class="built_in">transformPoint4x3</span>(p_orig, viewmatrix);</span><br></pre></td></tr></table></figure>
+<p>把点进行视图变换，转换到屏幕空间。<br>$$P_{view} &#x3D; M_{view} * P_{orig}$$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (p_view.z &lt;= <span class="number">0.2f</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (prefiltered)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Point is filtered although prefiltered is set. This shouldn&#x27;t happen!&quot;</span>);</span><br><span class="line">        __trap();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>如果点的深度$z \le 0.2$，说明在相机后面，<code>retrurn false</code>表示不在视锥内。如果 <code>prefiltered</code> 为 <code>true</code>，意味着上层代码已经宣称“这个点是可见的”，现在的 GPU 代码算出来这个点其实是在相机后面的，说明出错了，<code>__trap()</code>强制中断。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="built_in">in_frustum</span>(idx, orig_points, viewmatrix, projmatrix, prefiltered, p_view))</span><br><span class="line">	<span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+<p>如果不在视锥内，则不处理这个点。</p>
+<h4 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">float3 p_orig = &#123; orig_points[<span class="number">3</span> * idx], orig_points[<span class="number">3</span> * idx + <span class="number">1</span>], orig_points[<span class="number">3</span> * idx + <span class="number">2</span>] &#125;;</span><br><span class="line">float4 p_hom = <span class="built_in">transformPoint4x4</span>(p_orig, projmatrix);</span><br><span class="line"><span class="type">float</span> p_w = <span class="number">1.0f</span> / (p_hom.w + <span class="number">0.0000001f</span>);</span><br><span class="line">float3 p_proj = &#123; p_hom.x * p_w, p_hom.y * p_w, p_hom.z * p_w &#125;;</span><br></pre></td></tr></table></figure>
+<p>在<code>orig_points</code>里取出这个点，再用投影矩阵进行变换，最后归一化。<br>$$ P_{hom} &#x3D; M_{proj} \times P_{orig} &#x3D; \begin{bmatrix} x_{clip} \ y_{clip} \ z_{clip} \ w_{clip} \end{bmatrix} $$<br>$$ P_{proj} &#x3D; \begin{bmatrix} x_{ndc} \ y_{ndc} \ z_{ndc} \end{bmatrix} &#x3D; \begin{bmatrix} x_{clip} &#x2F; w_{clip} \ y_{clip} &#x2F; w_{clip} \ z_{clip} &#x2F; w_{clip} \end{bmatrix} $$</p>
+<h4 id="计算3D协方差矩阵：computeCov3D"><a href="#计算3D协方差矩阵：computeCov3D" class="headerlink" title="计算3D协方差矩阵：computeCov3D"></a>计算3D协方差矩阵：computeCov3D</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glm::mat3 S = glm::<span class="built_in">mat3</span>(<span class="number">1.0f</span>);</span><br><span class="line">S[<span class="number">0</span>][<span class="number">0</span>] = mod * scale.x;</span><br><span class="line">S[<span class="number">1</span>][<span class="number">1</span>] = mod * scale.y;</span><br><span class="line">S[<span class="number">2</span>][<span class="number">2</span>] = mod * scale.z;</span><br></pre></td></tr></table></figure>
+
+<p>$$ S &#x3D; \begin{bmatrix} s_x \cdot m &amp; 0 &amp; 0 \ 0 &amp; s_y \cdot m &amp; 0 \ 0 &amp; 0 &amp; s_z \cdot m \end{bmatrix} $$<br>创建一个对角矩阵 $S$。其中 $m$ 是 <code>mod</code>（全局缩放系数），$s_x, s_y, s_z$ 是各轴向的缩放。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat3 R = glm::<span class="built_in">mat3</span>(</span><br><span class="line">    <span class="number">1.f</span> - <span class="number">2.f</span> * (y * y + z * z), <span class="number">2.f</span> * (x * y - r * z), <span class="number">2.f</span> * (x * z + r * y),</span><br><span class="line">    <span class="number">2.f</span> * (x * y + r * z), <span class="number">1.f</span> - <span class="number">2.f</span> * (x * x + z * z), <span class="number">2.f</span> * (y * z - r * x),</span><br><span class="line">    <span class="number">2.f</span> * (x * z - r * y), <span class="number">2.f</span> * (y * z + r * x), <span class="number">1.f</span> - <span class="number">2.f</span> * (x * x + y * y)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>$$R &#x3D; \begin{bmatrix}<br>1 - 2y^2 - 2z^2 &amp; 2xy - 2zw &amp; 2xz + 2yw \<br>2xy + 2zw &amp; 1 - 2x^2 - 2z^2 &amp; 2yz - 2xw \<br>2xz - 2yw &amp; 2yz + 2xw &amp; 1 - 2x^2 - 2y^2<br>\end{bmatrix}$$<br>将四元数转换为 3x3 旋转矩阵。（代码中 <code>r</code> 对应 $w$）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">glm::mat3 M = S * R;</span><br><span class="line">glm::mat3 Sigma = glm::<span class="built_in">transpose</span>(M) * M;</span><br></pre></td></tr></table></figure>
+<p>$$M &#x3D; S \cdot R$$<br>$$ \Sigma &#x3D; M^T M &#x3D; (SR)^T (SR) &#x3D; R^T S^T S R $$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cov3D[<span class="number">0</span>] = Sigma[<span class="number">0</span>][<span class="number">0</span>]; <span class="comment">// xx</span></span><br><span class="line">cov3D[<span class="number">1</span>] = Sigma[<span class="number">0</span>][<span class="number">1</span>]; <span class="comment">// xy</span></span><br><span class="line">cov3D[<span class="number">2</span>] = Sigma[<span class="number">0</span>][<span class="number">2</span>]; <span class="comment">// xz</span></span><br><span class="line">cov3D[<span class="number">3</span>] = Sigma[<span class="number">1</span>][<span class="number">1</span>]; <span class="comment">// yy</span></span><br><span class="line">cov3D[<span class="number">4</span>] = Sigma[<span class="number">1</span>][<span class="number">2</span>]; <span class="comment">// yz</span></span><br><span class="line">cov3D[<span class="number">5</span>] = Sigma[<span class="number">2</span>][<span class="number">2</span>]; <span class="comment">// zz</span></span><br></pre></td></tr></table></figure>
+<p>协方差矩阵 $\Sigma$ 是一个<strong>对称矩阵</strong>（即 $A_{ij} &#x3D; A_{ji}$）。为了节省显存和带宽，代码只存储了矩阵的<strong>上三角部分</strong></p>
+<h4 id="计算2D协方差矩阵：computeCov2D"><a href="#计算2D协方差矩阵：computeCov2D" class="headerlink" title="计算2D协方差矩阵：computeCov2D"></a>计算2D协方差矩阵：computeCov2D</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">float3 t = <span class="built_in">transformPoint4x3</span>(mean, viewmatrix);</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> limx = <span class="number">1.3f</span> * tan_fovx;</span><br><span class="line"><span class="type">const</span> <span class="type">float</span> limy = <span class="number">1.3f</span> * tan_fovy;</span><br><span class="line"><span class="type">const</span> <span class="type">float</span> txtz = t.x / t.z;</span><br><span class="line"><span class="type">const</span> <span class="type">float</span> tytz = t.y / t.z;</span><br><span class="line">t.x = <span class="built_in">min</span>(limx, <span class="built_in">max</span>(-limx, txtz)) * t.z;</span><br><span class="line">t.y = <span class="built_in">min</span>(limy, <span class="built_in">max</span>(-limy, tytz)) * t.z;</span><br><span class="line">```    </span><br><span class="line">将高斯球的中心点 `mean` 从世界坐标系变换到相机坐标系 `t` 。计算视野边界`limx`，`limy`，乘以 `<span class="number">1.3f</span>` 是为了留出额外的缓冲区域，计算点在图像平面上的投影位置`txtz`，`tytz`，确保数值不小于左边界（`-limx`），不大于右边界（`limx`），保证点在视锥体内。</span><br><span class="line"></span><br><span class="line">```cpp</span><br><span class="line">glm::mat3 J = glm::<span class="built_in">mat3</span>(</span><br><span class="line">    focal_x / t.z, <span class="number">0.0f</span>, -(focal_x * t.x) / (t.z * t.z),</span><br><span class="line">    <span class="number">0.0f</span>, focal_y / t.z, -(focal_y * t.y) / (t.z * t.z),</span><br><span class="line">    <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>J &#x3D; \begin{bmatrix}<br>\frac{\partial u}{\partial x} &amp; \frac{\partial u}{\partial y} &amp; \frac{\partial u}{\partial z} \<br>\frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y} &amp; \frac{\partial v}{\partial z}<br>\end{bmatrix} &#x3D; \begin{pmatrix}<br>\frac{f_x}{z} &amp; 0 &amp; -\frac{f_x x}{z^2} \<br>0 &amp; \frac{f_y}{z} &amp; -\frac{f_y y}{z^2}<br>\end{pmatrix}<br>$$<br>计算雅可比矩阵$J$，透视除法后2D协方差矩阵不需要深度信息，第三行置0</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glm::mat3 W = glm::<span class="built_in">mat3</span>(</span><br><span class="line">    viewmatrix[<span class="number">0</span>], viewmatrix[<span class="number">4</span>], viewmatrix[<span class="number">8</span>],</span><br><span class="line">    viewmatrix[<span class="number">1</span>], viewmatrix[<span class="number">5</span>], viewmatrix[<span class="number">9</span>],</span><br><span class="line">    viewmatrix[<span class="number">2</span>], viewmatrix[<span class="number">6</span>], viewmatrix[<span class="number">10</span>]);</span><br></pre></td></tr></table></figure>
+<p>计算视图变换矩阵$W$，这里只提取了视图矩阵的 3x3 旋转部分（去掉了平移，因为协方差只与形状和方向有关，与位置无关）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">glm::mat3 T = W * J;</span><br><span class="line"></span><br><span class="line">glm::mat3 Vrk = glm::<span class="built_in">mat3</span>(</span><br><span class="line">    cov3D[<span class="number">0</span>], cov3D[<span class="number">1</span>], cov3D[<span class="number">2</span>],</span><br><span class="line">    cov3D[<span class="number">1</span>], cov3D[<span class="number">3</span>], cov3D[<span class="number">4</span>],</span><br><span class="line">    cov3D[<span class="number">2</span>], cov3D[<span class="number">4</span>], cov3D[<span class="number">5</span>]);</span><br><span class="line"></span><br><span class="line">glm::mat3 cov = glm::<span class="built_in">transpose</span>(T) * glm::<span class="built_in">transpose</span>(Vrk) * T;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123; <span class="built_in">float</span>(cov[<span class="number">0</span>][<span class="number">0</span>]), <span class="built_in">float</span>(cov[<span class="number">0</span>][<span class="number">1</span>]), <span class="built_in">float</span>(cov[<span class="number">1</span>][<span class="number">1</span>]) &#125;;</span><br></pre></td></tr></table></figure>
+<p>$$ \begin{align*}<br>    \Sigma_{2D} &amp;&#x3D; T V_{rk} T^T \<br>         &amp;&#x3D; JW\Sigma_{3D}W^TJ^T<br>\end{align*}$$<br>用<code>Vrk</code>重构 3D 协方差矩阵，运用协方差变换公式，最后由于协方差矩阵的对称性，只返回3个值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">float3 cov = <span class="built_in">computeCov2D</span>(p_orig, focal_x, focal_y, tan_fovx, tan_fovy, cov3D, viewmatrix);</span><br></pre></td></tr></table></figure>
+<h4 id="计算渲染边界"><a href="#计算渲染边界" class="headerlink" title="计算渲染边界"></a>计算渲染边界</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> mid = <span class="number">0.5f</span> * (cov.x + cov.z);</span><br><span class="line"><span class="type">float</span> lambda1 = mid + <span class="built_in">sqrt</span>(<span class="built_in">max</span>(<span class="number">0.1f</span>, mid * mid - det));</span><br><span class="line"><span class="type">float</span> lambda2 = mid - <span class="built_in">sqrt</span>(<span class="built_in">max</span>(<span class="number">0.1f</span>, mid * mid - det));</span><br></pre></td></tr></table></figure>
+<p>利用 2x2 矩阵特征值的解析解公式，对于一个 2x2 对称矩阵，其特征值 $\lambda$ 满足：<br>$$ \lambda &#x3D; \frac{\text{tr}(\Sigma)}{2} \pm \sqrt{\left(\frac{\text{tr}(\Sigma)}{2}\right)^2 - \det(\Sigma)} $$<br>较大的特征值对应椭圆长轴长度的平方，较小的特征值对应椭圆短轴长度的平方。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> my_radius = <span class="built_in">ceil</span>(<span class="number">3.f</span> * <span class="built_in">sqrt</span>(<span class="built_in">max</span>(lambda1, lambda2)));</span><br></pre></td></tr></table></figure>
+<p><code>sqrt(lambda1)</code>取出长轴的标准差，根据3-Sigma原则，高斯分布的 99.7% 的能量集中在均值周围 3 倍标准差的范围内。<code>ceil(...)</code>向上取整，确保覆盖所有可能的像素。把高斯椭圆近似看成圆，<code>my_radius</code> 是这个圆屏幕上占据的最大像素半径。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">float2 point_image = &#123; <span class="built_in">ndc2Pix</span>(p_proj.x, W), <span class="built_in">ndc2Pix</span>(p_proj.y, H) &#125;;</span><br><span class="line"><span class="built_in">getRect</span>(point_image, my_radius, rect_min, rect_max, grid);</span><br></pre></td></tr></table></figure>
+<p>其中</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rect_min = &#123;</span><br><span class="line">    <span class="built_in">min</span>(grid.x, <span class="built_in">max</span>((<span class="type">int</span>)<span class="number">0</span>, (<span class="type">int</span>)((p.x - max_radius) / BLOCK_X))),</span><br><span class="line">    <span class="built_in">min</span>(grid.y, <span class="built_in">max</span>((<span class="type">int</span>)<span class="number">0</span>, (<span class="type">int</span>)((p.y - max_radius) / BLOCK_Y)))</span><br><span class="line">&#125;;</span><br><span class="line">rect_max = &#123;</span><br><span class="line">    <span class="built_in">min</span>(grid.x, <span class="built_in">max</span>((<span class="type">int</span>)<span class="number">0</span>, (<span class="type">int</span>)((p.x + max_radius + BLOCK_X - <span class="number">1</span>) / BLOCK_X))),</span><br><span class="line">    <span class="built_in">min</span>(grid.y, <span class="built_in">max</span>((<span class="type">int</span>)<span class="number">0</span>, (<span class="type">int</span>)((p.y + max_radius + BLOCK_Y - <span class="number">1</span>) / BLOCK_Y)))</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>ndc2Pix</code>将高斯中心点从NDC转换为屏幕像素坐标。根据中心点 <code>point_image</code> 和半径 <code>my_radius</code>，<code>/ BLOCK_X</code>将像素坐标转换为线程块坐标，计算覆盖范围涉及到的Tile，用<code>rect_min</code>和<code>rect_max</code>（左上角和右下角）定义了一个受影响的线程块矩形区域，后续计算只在这些Tile上进行。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ((rect_max.x - rect_min.x) * (rect_max.y - rect_min.y) == <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span>;</span><br></pre></td></tr></table></figure>
+<p>如果计算出的矩形面积为 0（例如高斯球太小，或者完全在屏幕外），则直接终止函数，节省 GPU 算力。</p>
+<h4 id="计算颜色：computeColorFromSH"><a href="#计算颜色：computeColorFromSH" class="headerlink" title="计算颜色：computeColorFromSH"></a>计算颜色：computeColorFromSH</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glm::vec3 pos = means[idx];</span><br><span class="line">glm::vec3 dir = pos - campos;</span><br><span class="line">dir = dir / glm::<span class="built_in">length</span>(dir);</span><br></pre></td></tr></table></figure>
+<p>计算从相机位置 campos 到高斯球中心 pos 的向量，并将其归一化。这代表了当前的观察角度。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">glm::vec3* sh = ((glm::vec3*)shs) + idx * max_coeffs;</span><br></pre></td></tr></table></figure>
+<p>获取系数指针</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = SH_C0 * sh[<span class="number">0</span>];</span><br><span class="line">result = result - SH_C1 * y * sh[<span class="number">1</span>] + SH_C1 * z * sh[<span class="number">2</span>] - SH_C1 * x * sh[<span class="number">3</span>];</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>f(t) \approx c_0^0 y_0^0 + c_1^{-1} y_1^{-1} + c_1^0 y_1^0 + c_1^1 y_1^1 + c_2^{-2} y_2^{-2} + c_2^{-1} y_2^{-1} + c_2^0 y_2^0 + c_2^1 y_2^1 + c_2^2 y_2^2 + c_3^{-3} y_3^{-3} + \cdots<br>$$</p>
+<p>$$ y_0^0 &#x3D; \sqrt{\frac{1}{4\pi}} \approx 0.28 $$<br>$$ y_1^{-1} &#x3D; -\sqrt{\frac{3}{4\pi}} \frac{y}{r} \approx -0.49 \frac{y}{r} $$<br>$$ y_1^0 &#x3D; \sqrt{\frac{3}{4\pi}} \frac{z}{r} \approx 0.49 \frac{z}{r} $$<br>$$ y_1^{1} &#x3D; -\sqrt{\frac{3}{4\pi}} \frac{x}{r} \approx -0.49 \frac{x}{r} $$<br>$$\vdots$$<br><code>SH_C0</code>, <code>SH_C1</code>, <code>SH_C2</code> 等是球谐函数的常数系数（如$\frac{1}{4\pi}$）。<code>x</code>，<code>y</code>，<code>xx</code>，<code>xy</code>等是与观察角度有关的函数（如$\frac{y}{r}$），它们共同构成了基函数，<code>sh</code>存储了三维向量rgb的系数（即$c_l^m$）。</p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h3 id="颜色混合"><a href="#颜色混合" class="headerlink" title="颜色混合"></a>颜色混合</h3>
+                    
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                3DGS代码解读
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2026/04/04/3DGS代码解读/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    Author
+                </div>
+                <div class="content">Seanoll</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    Published
+                </div>
+                <div class="content">2026-04-04 15:49</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    License
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="Copy copyright info" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="Share to WeChat"
+            data-tooltip-img-tip="Scan by WeChat"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to WeiBo"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/04/03/3DGS%E5%A4%8D%E7%8E%B0/"
+                                   title="3DGS复现"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">3DGS复现</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="giscus-comments-container">
+        <div class="giscus" id="giscus"></div>
+        <script 
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          if (!window.KeepCommentPlugin?.getGiscusTheme) {
+            window.KeepCommentPlugin.getGiscusTheme = () => {
+              return document.documentElement.classList.contains('dark-mode') ? 'dark_dimmed' : 'light_tritanopia'
+            }
+          }
+
+          if (!window.KeepCommentPlugin?.changeGiscusTheme) {
+            window.KeepCommentPlugin.changeGiscusTheme = () => {
+              const iframe = document.querySelector('iframe.giscus-frame')
+              iframe && iframe.contentWindow.postMessage({
+                giscus: {
+                  setConfig: {
+                    theme: window.KeepCommentPlugin.getGiscusTheme()
+                  }
+                }
+              }, 'https://giscus.app')
+            }
+          }
+
+          if (!window.KeepCommentPlugin?.initGiscus) {
+            window.KeepCommentPlugin.initGiscus = () => {
+              const script = document.createElement('script')
+              script.async = true
+              script.src = 'https://giscus.app/client.js'
+              script.setAttribute('data-repo', 'Seanoll/hexo_site_comments')
+              script.setAttribute('data-repo-id', 'R_kgDORRWq5g')
+              script.setAttribute('data-category', 'Announcements')
+              script.setAttribute('data-category-id', 'DIC_kwDORRWq5s4C2oDI')
+              script.setAttribute('data-reactions-enabled', '0')
+              script.setAttribute('data-lang', 'en')
+              script.setAttribute('data-mapping', 'pathname')
+              script.setAttribute('data-strict', '0')
+              script.setAttribute('data-emit-metadata', '0')
+              script.setAttribute('data-input-position', 'top')
+              script.setAttribute('crossorigin', 'anonymous')
+              script.setAttribute('loading', 'lazy')
+              script.setAttribute('data-theme', window.KeepCommentPlugin.getGiscusTheme())
+              document.querySelector('.giscus-comments-container').appendChild(script)
+              script.onerror = () => {
+                window.KeepCommentPlugin.loadFailHandle()
+              }
+              script.onload = () => {
+                window.KeepCommentPlugin.hideLoading()
+              }
+              const toggleThemeBtn = document.querySelector('.tool-toggle-theme-mode')
+              toggleThemeBtn && toggleThemeBtn.addEventListener('click', () => {
+                window.KeepCommentPlugin.changeGiscusTheme()
+              })
+            }
+          }
+
+          if ('false' === "true") {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initGiscus()
+            }, 1000)
+          } else {
+            window.addEventListener("DOMContentLoaded", window.KeepCommentPlugin.initGiscus)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83"><span class="nav-text">训练</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%EF%BC%9AArgumentParser"><span class="nav-text">命令行参数：ArgumentParser</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text">核心工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#type"><span class="nav-text">type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#default"><span class="nav-text">default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help"><span class="nav-text">help</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#action"><span class="nav-text">action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nargs"><span class="nav-text">nargs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF"><span class="nav-text">核心优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#forward"><span class="nav-text">forward</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%9Apreprocess"><span class="nav-text">预处理：preprocess</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%86%E9%94%A5%E5%89%94%E9%99%A4%EF%BC%9Ain-frustum"><span class="nav-text">视锥剔除：in_frustum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1"><span class="nav-text">投影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%973D%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%EF%BC%9AcomputeCov3D"><span class="nav-text">计算3D协方差矩阵：computeCov3D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%972D%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%EF%BC%9AcomputeCov2D"><span class="nav-text">计算2D协方差矩阵：computeCov2D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%B8%B2%E6%9F%93%E8%BE%B9%E7%95%8C"><span class="nav-text">计算渲染边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E9%A2%9C%E8%89%B2%EF%BC%9AcomputeColorFromSH"><span class="nav-text">计算颜色：computeColorFromSH</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E6%B7%B7%E5%90%88"><span class="nav-text">颜色混合</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2025</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Seanoll</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/">
+            
+            This site is deployed on <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span>
+            
+                </a>
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">Total words</span>
+                    <span class="item-value border-box word">10.8k</span>
+                </span>
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83"><span class="nav-text">训练</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%EF%BC%9AArgumentParser"><span class="nav-text">命令行参数：ArgumentParser</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text">核心工作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#type"><span class="nav-text">type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#default"><span class="nav-text">default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#help"><span class="nav-text">help</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#action"><span class="nav-text">action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nargs"><span class="nav-text">nargs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF"><span class="nav-text">核心优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#forward"><span class="nav-text">forward</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%9Apreprocess"><span class="nav-text">预处理：preprocess</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%86%E9%94%A5%E5%89%94%E9%99%A4%EF%BC%9Ain-frustum"><span class="nav-text">视锥剔除：in_frustum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1"><span class="nav-text">投影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%973D%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%EF%BC%9AcomputeCov3D"><span class="nav-text">计算3D协方差矩阵：computeCov3D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%972D%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5%EF%BC%9AcomputeCov2D"><span class="nav-text">计算2D协方差矩阵：computeCov2D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%B8%B2%E6%9F%93%E8%BE%B9%E7%95%8C"><span class="nav-text">计算渲染边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E9%A2%9C%E8%89%B2%EF%BC%9AcomputeColorFromSH"><span class="nav-text">计算颜色：computeColorFromSH</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E6%B7%B7%E5%90%88"><span class="nav-text">颜色混合</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
