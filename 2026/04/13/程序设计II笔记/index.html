@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Seanoll">
+    
+    <title>
+        
+            程序设计II笔记 |
+        
+        Seanoll
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/dog.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"seanoll.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Seanoll","author":"Seanoll","avatar":"/images/dog2.jpg","logo":null,"favicon":"/images/dog.svg"},"menu":{"home":"/                        || fa-solid fa-home","archives":"/archives            || fa-solid fa-box-archive","categories":"/categories      || fa-solid fa-layer-group","about":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":null,"hitokoto":true},"social_contact":{"enable":true,"links":{"github":"https://github.com/Seanoll","weixin":"img | /images/wechat_qrcode.jpg","qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"bilibili":"https://space.bilibili.com/286960493","email":"s2494122776@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":null,"category":true,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":false,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"share":true,"reward":{"enable":false,"img_link":"/images/reward.jpg","text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"giscus","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":"Seanoll","github_admins":null,"repository":"hexo_site_comments","client_id":"Ov23liMgLERBhzmlK5sZ","client_secret":"6b44453351f4a09534647519641ee66b21a580cd","proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":"Seanoll/hexo_site_comments","repo_id":"R_kgDORRWq5g","category":"Announcements","category_id":"DIC_kwDORRWq5s4C2oDI","reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2025,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"mathjax":{"tags":"none","single_dollars":true,"cjk_width":0.9,"normal_width":0.6,"append_css":true,"every_page":false},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+            <a class="site-name border-box" href="/">
+               Seanoll
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                ABOUT
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            ABOUT
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        程序设计II笔记
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/dog2.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Seanoll</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-04-13 12:48:18</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Mon Apr 13 2026 13:02:01 GMT+0800">2026-04-13 13:02:01</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/learning/">learning</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>8.2k Words</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>30 Mins</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="from-C-to-C"><a href="#from-C-to-C" class="headerlink" title="from C to C++"></a>from C to C++</h1><h2 id="课程成绩"><a href="#课程成绩" class="headerlink" title="课程成绩"></a>课程成绩</h2><p>平时成绩&#x3D;平时练习*0.6+期中考试*0.3+考勤*0.1<br>期末考试&#x3D;期末实验*0.6+期末理论*0.4<br>总评&#x3D;期末*0.6+平时*0.4</p>
+<h2 id="C-历史"><a href="#C-历史" class="headerlink" title="C++历史"></a>C++历史</h2><ul>
+<li>面向对象的特点：<ul>
+<li>封装、继承和多态</li>
+<li>作为抽象数据类型的类</li>
+<li>易于调试和维护</li>
+<li>是软件开发的主流</li>
+</ul>
+</li>
+<li>一些新增内容：<ul>
+<li>流式IO操作(std::cin,std::cout)</li>
+<li>命名空间</li>
+<li>引用</li>
+<li>const和constexpr</li>
+</ul>
+</li>
+</ul>
+<h2 id="io流"><a href="#io流" class="headerlink" title="io流"></a>io流</h2><h3 id="初识对象"><a href="#初识对象" class="headerlink" title="初识对象"></a>初识对象</h3><ul>
+<li>什么是对象<ul>
+<li>对象是现实世界或抽象世界中事物的一种计算机表示。</li>
+</ul>
+</li>
+<li>定义于&lt;iostream&gt;中有三个对象<ul>
+<li>cin标准输入流，使用stdout输出</li>
+<li>cout标准输出流，使用stdin输入</li>
+<li>cerr标准错误流，使用stderr输出</li>
+</ul>
+</li>
+</ul>
+<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><ul>
+<li>C++的大多数运算符都可以重载：根据操作数不同，自定义运算符的操作。例如”&lt;&lt;””&gt;&gt;”是位移运算符，它左右操作数必须是整数。</li>
+<li>C++形象地将位移运算符用于流对象输入输出操作，例如<code>cout&lt;&lt;&quot;hello&quot;</code>的含义是将hello字符放入stdout输出管道。<code>cin&gt;&gt;aInt</code>是将stdin管道输入按”%d”格式转换后放入变量。</li>
+<li>“&lt;&lt;” 重载为输出运算<ul>
+<li>左操作数必须是输出流对象</li>
+<li>右操作数是任意类型，编译器会根据右操作数类型选择合适的 fprintf 格式化语句的版本。如右操作数是double，输出格式是”%lf”。</li>
+<li>表达式返回左操作数的引用，是左值</li>
+</ul>
+</li>
+<li>“&gt;&gt;” 重载为输入运算<ul>
+<li>左操作数必须是输入流对象</li>
+<li>右操作数必须是左值，任意类型。编译自动根据类型使用合适 fscanf</li>
+<li>表达式返回左操作数的引用，是左值</li>
+</ul>
+</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/io/manip.html" >输入输出操纵符<i class="fas fa-external-link-alt"></i></a><ul>
+<li>&lt;iostream&gt;</li>
+<li>endl输出’\n’并冲洗输出流</li>
+<li>dec,hex,oct</li>
+<li>left,right</li>
+<li>fixed,scientific</li>
+<li>showpoint,noshowpoint</li>
+<li>showpos,noshowpos</li>
+<li>&lt;iomanip&gt;</li>
+<li>setw</li>
+<li>setprecision</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-基础控制"><a href="#1-基础控制" class="headerlink" title="1. 基础控制 (&lt;iostream&gt;)"></a>1. 基础控制 (<code>&lt;iostream&gt;</code>)</h4><table>
+<thead>
+<tr>
+<th align="left">操纵符</th>
+<th align="left">作用</th>
+<th align="left">持续性</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>endl</code></td>
+<td align="left">换行 + <strong>刷新缓冲区</strong></td>
+<td align="left">-</td>
+<td align="left">频繁使用影响性能</td>
+</tr>
+<tr>
+<td align="left"><code>flush</code></td>
+<td align="left">仅刷新缓冲区</td>
+<td align="left">-</td>
+<td align="left">强制输出，不换行</td>
+</tr>
+<tr>
+<td align="left"><code>ws</code></td>
+<td align="left">(输入) 跳过前导空白</td>
+<td align="left">-</td>
+<td align="left">常用于 <code>cin &gt;&gt; ws</code></td>
+</tr>
+<tr>
+<td align="left"><code>dec</code></td>
+<td align="left">十进制 (默认)</td>
+<td align="left">✅ 持久</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><code>hex</code></td>
+<td align="left">十六进制</td>
+<td align="left">✅ 持久</td>
+<td align="left">配合 <code>showbase</code> 显示 0x</td>
+</tr>
+<tr>
+<td align="left"><code>oct</code></td>
+<td align="left">八进制</td>
+<td align="left">✅ 持久</td>
+<td align="left">配合 <code>showbase</code> 显示 0</td>
+</tr>
+<tr>
+<td align="left"><code>showbase</code> &#x2F; <code>noshowbase</code></td>
+<td align="left">显示&#x2F;隐藏进制前缀 (0x, 0)</td>
+<td align="left">✅ 持久</td>
+<td align="left">默认隐藏</td>
+</tr>
+<tr>
+<td align="left"><code>boolalpha</code> &#x2F; <code>noboolalpha</code></td>
+<td align="left">布尔显示 <code>true/false</code> 或 <code>1/0</code></td>
+<td align="left">✅ 持久</td>
+<td align="left">默认 <code>1/0</code></td>
+</tr>
+<tr>
+<td align="left"><code>showpoint</code> &#x2F; <code>noshowpoint</code></td>
+<td align="left">强制&#x2F;隐藏显示小数点及后随零</td>
+<td align="left">✅ 持久</td>
+<td align="left">默认 <code>noshowpoint</code></td>
+</tr>
+<tr>
+<td align="left"><code>uppercase</code> &#x2F; <code>nouppercase</code></td>
+<td align="left">十六进制&#x2F;指数大写 (A-F, E)</td>
+<td align="left">✅ 持久</td>
+<td align="left">默认小写</td>
+</tr>
+</tbody></table>
+<h4 id="2-格式排版"><a href="#2-格式排版" class="headerlink" title="2. 格式排版 (&lt;iomanip&gt;)"></a>2. 格式排版 (<code>&lt;iomanip&gt;</code>)</h4><table>
+<thead>
+<tr>
+<th align="left">操纵符</th>
+<th align="left">参数</th>
+<th align="left">作用</th>
+<th align="left">持续性</th>
+<th align="left">关键提示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>setw(n)</code></td>
+<td align="left">整数</td>
+<td align="left">设置<strong>下一个</strong>字段宽度</td>
+<td align="left">❌ <strong>一次性</strong></td>
+<td align="left"><strong>每列都要重写</strong></td>
+</tr>
+<tr>
+<td align="left"><code>setprecision(n)</code></td>
+<td align="left">整数</td>
+<td align="left">设置精度</td>
+<td align="left">✅ 持久</td>
+<td align="left"><code>fixed</code>下&#x3D;小数位; 默认&#x3D;有效数字</td>
+</tr>
+<tr>
+<td align="left"><code>setfill(c)</code></td>
+<td align="left">字符</td>
+<td align="left">设置填充字符</td>
+<td align="left">✅ 持久</td>
+<td align="left">默认是空格 <code>&#39; &#39;</code></td>
+</tr>
+<tr>
+<td align="left"><code>left</code></td>
+<td align="left">无</td>
+<td align="left"><strong>左对齐</strong></td>
+<td align="left">✅ 持久</td>
+<td align="left">配合 <code>setw</code></td>
+</tr>
+<tr>
+<td align="left"><code>right</code></td>
+<td align="left">无</td>
+<td align="left"><strong>右对齐</strong> (默认)</td>
+<td align="left">✅ 持久</td>
+<td align="left">配合 <code>setw</code></td>
+</tr>
+<tr>
+<td align="left"><code>internal</code></td>
+<td align="left">无</td>
+<td align="left">内部对齐 (符号左，数右)</td>
+<td align="left">✅ 持久</td>
+<td align="left">仅对数值有效</td>
+</tr>
+<tr>
+<td align="left"><code>fixed</code></td>
+<td align="left">无</td>
+<td align="left"><strong>定点</strong>表示法</td>
+<td align="left">✅ 持久</td>
+<td align="left">禁止科学计数法</td>
+</tr>
+<tr>
+<td align="left"><code>scientific</code></td>
+<td align="left">无</td>
+<td align="left"><strong>科学</strong>计数法</td>
+<td align="left">✅ 持久</td>
+<td align="left">强制 <code>e+</code> 格式</td>
+</tr>
+</tbody></table>
+<h4 id="3-核心口诀"><a href="#3-核心口诀" class="headerlink" title="3. 核心口诀"></a>3. 核心口诀</h4><ul>
+<li><strong>一次性</strong>：只有 <code>setw</code> 是一次性的，其他大多持久。</li>
+<li><strong>精度含义</strong>：<code>fixed</code> + <code>precision</code> &#x3D; 小数位数；默认 + <code>precision</code> &#x3D; 总有效位。</li>
+<li><strong>性能</strong>：循环输出少用 <code>endl</code>，多用 <code>\n</code>。</li>
+<li><strong>包含</strong>：带参数的必须 <code>#include &lt;iomanip&gt;</code>。</li>
+</ul>
+<h2 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h2><ul>
+<li><strong>含义</strong>：<strong>编译期常量表达式</strong>。</li>
+<li><strong>作用</strong>：强制编译器在<strong>编译阶段</strong>计算结果，而非运行时。</li>
+<li><strong>对比 <code>const</code></strong>：<ul>
+<li><code>const</code> &#x3D; 运行时只读 (值可来自运行期)。</li>
+<li><code>constexpr</code> &#x3D; <strong>编译期</strong>已知 (值必须来自字面量或其他 constexpr)。</li>
+</ul>
+</li>
+<li>核心用途:<ol>
+<li><strong>替代宏</strong>：定义类型安全的常量 (<code>constexpr int N = 10;</code>)。</li>
+<li><strong>数组维度</strong>：<code>int arr[N];</code> (N 必须编译期已知)。</li>
+<li><strong>模板参数</strong>：<code>std::array&lt;int, N&gt;</code>。</li>
+<li><strong>性能优化</strong>：将复杂计算移至编译期，运行时零开销。</li>
+</ol>
+</li>
+</ul>
+<h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><ul>
+<li>在大型项目或使用多个第三方库时，很容易出现两个不同的库定义了相同名称的函数或类的情况。例如，库 A 和库 B 都有一个叫 print() 的函数。如果没有命名空间，编译器就无法区分你调用的是哪一个，导致编译错误。</li>
+</ul>
+<h3 id="1-核心概念"><a href="#1-核心概念" class="headerlink" title="1. 核心概念"></a>1. 核心概念</h3><ul>
+<li><strong>定义</strong>：命名空间是 C++ 中用于组织代码、避免命名冲突的机制。</li>
+<li><strong>作用</strong>：将相关的类、函数、变量等封装在特定的作用域内，防止不同库或模块间出现同名标识符冲突。</li>
+<li><strong>类比</strong>：就像文件系统中的“文件夹”，不同文件夹下可以有同名文件，通过路径区分。</li>
+</ul>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul>
+<li>定义命名空间</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> MySpace &#123;</span><br><span class="line">    <span class="type">int</span> value = <span class="number">10</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 实现代码</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Data</span> &#123;</span><br><span class="line">        <span class="comment">// 类定义</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用方式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">方式</th>
+<th align="left">语法示例</th>
+<th align="left">特点</th>
+<th align="left">推荐度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">作用域解析</td>
+<td align="left"><code>MySpace::value</code></td>
+<td align="left">最明确，无歧义</td>
+<td align="left">⭐⭐⭐⭐⭐ (首选)</td>
+</tr>
+<tr>
+<td align="left">using 声明</td>
+<td align="left"><code>using MySpace::show;</code><br><code>show();</code></td>
+<td align="left">仅引入特定名称，安全</td>
+<td align="left">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td align="left">using 指令</td>
+<td align="left"><code>using namespace MySpace;</code><br><code>value = 20;</code></td>
+<td align="left">引入所有名称，易污染作用域</td>
+<td align="left">⭐⭐ (慎用)</td>
+</tr>
+</tbody></table>
+<ul>
+<li>嵌套<ul>
+<li><strong>定义</strong>：在已有的命名空间内部再定义新的命名空间，形成层级结构。</li>
+<li><strong>类比</strong>：文件系统目录结构（如 <code>/home/user/docs</code>），通过层级路径唯一标识资源。</li>
+<li>C++14及以前<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> Company &#123;</span><br><span class="line">  <span class="keyword">namespace</span> Product &#123;</span><br><span class="line">      <span class="keyword">namespace</span> Module &#123;</span><br><span class="line">          <span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">              <span class="comment">// 实现</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C++17及以后<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C++17 新语法：等价于上面的三层嵌套</span></span><br><span class="line"><span class="keyword">namespace</span> Company::Product::Module &#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用方式不变</span></span><br><span class="line">Company::Product::Module::<span class="built_in">init</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>定义</strong>：引用是某个已存在变量的<strong>别名 (Alias)</strong>。</li>
+<li><strong>本质</strong>：通过另一个名字访问同一个内存地址。</li>
+<li><strong>直观理解</strong>：给变量起“绰号”。操作别名等同于操作本体。</li>
+<li><strong>关键特性</strong>：<ul>
+<li>✅ <strong>必须初始化</strong>：定义时必须绑定到一个有效变量。</li>
+<li>✅ <strong>不可重绑定</strong>：一旦绑定，终身指向该变量（不能像指针那样改指向）。</li>
+<li>✅ <strong>非空性</strong>：理论上不存在“空引用”（必须绑定对象）。</li>
+<li>✅ <strong>语法透明</strong>：使用时不需要解引用符号（如 <code>*</code>），像普通变量一样操作。</li>
+</ul>
+</li>
+<li><strong>在C++中，尽可能少用指针</strong></li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>引用不是对象。它们可以不占用存储，尽管若需要分配存储以实现所需语义（例如，引用类型的非静态数据成员通常会增加类的大小，量为存储内存地址所需），则由编译器具体实现决定。</li>
+<li>因为引用不是对象，故<ul>
+<li>不存在引用的数组</li>
+<li>不存在指向引用的指针</li>
+<li>不存在引用的引用</li>
+<li>C++不存在引用为空的概念，即引用必须被定义</li>
+</ul>
+</li>
+<li>更多要掌握的关于引用概念，参见 cppreference– reference。<br>包括：左值引用、右值引用、转发引用、悬垂引用等。<br>面试经常涉及，后面课程可能并不讲解！</li>
+</ul>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>type &amp;别名 &#x3D;<strong>左值表达式</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;ref = a; <span class="comment">// ref 是 a 的引用（别名）</span></span><br><span class="line"></span><br><span class="line">ref = <span class="number">20</span>;     <span class="comment">// 修改 ref，实际上修改了 a</span></span><br><span class="line"><span class="comment">// 此时 a 的值也变成了 20</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> b = <span class="number">30</span>;</span><br><span class="line"><span class="comment">// ref = b;   // 错误理解！这不是让 ref 指向 b，而是把 b 的值赋给 a（因为 ref 就是 a）</span></span><br></pre></td></tr></table></figure>
+<h3 id="作为函数返回值"><a href="#作为函数返回值" class="headerlink" title="作为函数返回值"></a>作为函数返回值</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回数组中某个元素的引用</span></span><br><span class="line"><span class="function"><span class="type">int</span>&amp; <span class="title">getElement</span><span class="params">(<span class="type">int</span> index)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr[index];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">getElement</span>(<span class="number">0</span>) = <span class="number">100</span>; <span class="comment">// 合法！直接修改 arr[0]</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：返回函数内部的值的引用需要<strong>静态变量</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span>&amp; <span class="title">f</span><span class="params">( <span class="type">double</span> x )</span>     </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">static</span> <span class="type">double</span> y;</span><br><span class="line">  y = <span class="built_in">sin</span>(x);</span><br><span class="line">  <span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h2><ul>
+<li>在C语言中，一个函数只能定义一个函数名以及相关形参。C++ 则允许<strong>多个函数拥有相同的名字</strong>，只要它们的<strong>参数列表不同</strong>就可以，这就是<strong>函数的重载（Function Overloading）</strong>。借助重载，一个函数名可以有多种用途。<ol>
+<li>函数名相同。</li>
+<li>参数列表必须不同（这是重载的关键）。</li>
+<li>返回类型可以相同也可以不同，但仅返回类型不同不足以构成重载。</li>
+<li>重载发生在同一作用域（通常是同一个类或同一个命名空间内）。</li>
+</ol>
+</li>
+<li>参数列表不同的三种情况<ol>
+<li>参数类型不同</li>
+<li>参数个数不同</li>
+<li>参数顺序不同（当类型不同时）</li>
+</ol>
+</li>
+</ul>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><ul>
+<li>通过类这个概念分离了开发者和使用者的世界，类是关于事物的外部属性和行为特征接口的描述。</li>
+<li>指的是将数据和操作数据的方法捆绑在一起，并隐藏对象的内部实现细节，仅对外暴露有限的、受控的接口。封装的核心目的是信息隐藏。</li>
+</ul>
+<h2 id="使用C标准库"><a href="#使用C标准库" class="headerlink" title="使用C标准库"></a>使用C标准库</h2><ul>
+<li>原本C的库以xxx.h命名的，C++把它们放在std空间里，改名为cxxx</li>
+<li>C 标准库，即不仅可以用 g++ 编译 c 风格的 cpp 程序，也可以使用 C 库函数</li>
+<li>使用 getline 读入字符串到 s：<code>getline(cin,s)</code>可以读入一行，而<code>cin&gt;&gt;s</code>遇到空格就停止了</li>
+</ul>
+<h2 id="const和constexpr"><a href="#const和constexpr" class="headerlink" title="const和constexpr"></a>const和constexpr</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;array&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dis_1</span><span class="params">(<span class="type">const</span> <span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="comment">//错误，x是只读的变量</span></span><br><span class="line">    array &lt;<span class="type">int</span>,x&gt; myarr&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">    cout &lt;&lt; myarr[<span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dis_2</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">    array &lt;<span class="type">int</span>,x&gt; myarr&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">    cout &lt;&lt; myarr[<span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">dis_1</span>(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">dis_2</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>C语言中 const 关键字限定类型变量不可修改。在上示例代码中，dis_1() 和 dis_2() 函数中都包含一个 const int x，但 dis_1() 函数中的 x 无法完成初始化 array 容器的任务，而 dis_2() 函数中的 x 却可以。因为 const 语义有两个：<ul>
+<li>限定为不可修改（只读）变量</li>
+<li>限定作为常量或字面量</li>
+</ul>
+</li>
+<li>C++11 标准新添加的关键字 constexpr，声明编译时可以对函数或变量求值。即<ul>
+<li>限定为常量表达式</li>
+<li>限定为编译时可优化执行的函数</li>
+</ul>
+</li>
+<li>C++ 11标准中，为了解决 const 关键字的双重语义问题，保留了 const 表示“只读”的语义，而将“常量”的语义划分给了新添加的 constexpr 关键字。因此 C++11 标准中，建议将 const 和 constexpr 的功能区分开，即凡是表达“只读”语义的场景都使用 const，表达“常量”语义的场景都使用 constexpr。</li>
+</ul>
+<h2 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h2><ul>
+<li>auto的原理就是根据初始化的表达式，在编译期间根据表达式类型自动推导出对象的类型。auto的作用就是为了简化变量初始化，如果这个变量有初始化表达式，就可以用auto代替类型声明。例如：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> x1 = <span class="number">5</span>; <span class="comment">//等价于 int x1 = 5;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意：<ol>
+<li>用auto声明的变量必须初始化</li>
+<li>函数和模板参数不能被声明为auto</li>
+<li>因为auto是一个占位符，并不是一个他自己的类型，因此不能用于类型转换或其他一些操作，如sizeof和typeid</li>
+<li>定义在一个auto序列的变量必须始终推导成同一类型</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> x1 = <span class="number">5</span>,x2 = <span class="number">5.0</span>,x3=<span class="string">&#x27;r&#x27;</span>; <span class="comment">//这样写是不合法的，因为各个变量类型不同 </span></span><br></pre></td></tr></table></figure>
+<h1 id="string类"><a href="#string类" class="headerlink" title="string类"></a>string类</h1><h2 id="初识类"><a href="#初识类" class="headerlink" title="初识类"></a>初识类</h2><ul>
+<li>类是现实世界或抽象世界中概念，是关于同类事物定义的描述</li>
+<li>计算机语言中类是模板，它是关于成员对象数据成员和函数成员的描述</li>
+<li>class是一种数据类型</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ul>
+<li>C++提供了两种类型的字符串表示形式：<ul>
+<li>C风格字符串</li>
+<li>C++的string类 类型</li>
+</ul>
+</li>
+<li>为什么要引入string类型的对象？<ul>
+<li>C风格字符串定义时，必须事先知道保留多大空间存储字符串</li>
+<li>使用malloc动态空间处理字符串，对一般程序员来说太复杂，非常容易出现bug</li>
+</ul>
+</li>
+<li>在C++中，<strong>string类</strong>​ 是标准库（&lt;string&gt;头文件）提供的一个字符串类，用于方便、安全地处理和操作字符串。</li>
+</ul>
+<h2 id="创建string对象"><a href="#创建string对象" class="headerlink" title="创建string对象"></a>创建string对象</h2><ul>
+<li><code>string s1</code>是创建对象，不是声明变量。</li>
+<li><code>string s2 = &quot;c++&quot;</code><strong>不是赋值运算</strong>，它等价于<code>string s2(&quot;c++&quot;)</code>，它不会自动加<code>\0</code>，因为string类里存储了它的长度</li>
+</ul>
+<h2 id="string对象的运算"><a href="#string对象的运算" class="headerlink" title="string对象的运算"></a>string对象的运算</h2><ul>
+<li>string类实现了以下运算符的重载：<ul>
+<li>联接运算：operator+，连接两个字符串或者一个字符串和一个字符</li>
+<li>比较运算：operator&#x3D;&#x3D;,!&#x3D;,&lt;,&lt;&#x3D;,&gt;,&gt;&#x3D;，以字典序比较两个字符串</li>
+<li>下标运算：operator[]，访问指定字符，返回指定字符引用，即<strong>可作为左值</strong></li>
+<li>赋值运算：operator&#x3D;,+&#x3D;，右操作数可以使字符串，字符，C字符串，字符数组</li>
+</ul>
+</li>
+</ul>
+<h2 id="string对象操作"><a href="#string对象操作" class="headerlink" title="string对象操作"></a>string对象操作</h2><ul>
+<li>基本操作：length&#x2F;size, c_str<ul>
+<li><code>length()</code> 返回类型 size_t 的字符串的长度</li>
+<li><code>c_str()</code> 返回类型 const char * 的 C 风格字符串。以null结束</li>
+</ul>
+</li>
+<li>查找：find, rfind<ul>
+<li><code>find(string|char*|char s [,int pos=0])</code> 寻找首个等于给定字符序列的子串。搜索始于  pos，返回类型 size_t 的位置。rfind 从右边开始搜索</li>
+</ul>
+</li>
+<li>添加，插入，删除：append, insert, erase, clear <ul>
+<li><code>append(string)</code> 后附 string str</li>
+<li><code>append(int count, char ch)</code> 后附 count 个字符 ch</li>
+<li><code>insert(int index, int count, char ch)</code> 在 index 位置插入 count 个 ch</li>
+<li><code>insert(int index,  string|char* s)</code> 在 index 位置插入 s</li>
+<li><code>erase(int   index, int   count)</code> 删 除 从 index 开始的 count 个字符</li>
+<li><code>clear()</code> 清空</li>
+</ul>
+</li>
+<li>提取子字符串：substr<ul>
+<li><code>substr(int pos,  int  count)</code> 返回子串对象</li>
+</ul>
+</li>
+<li>比较：compare<ul>
+<li><code>compare(string|char* str)</code> 与str比较，返回 1，0，-1之一</li>
+</ul>
+</li>
+<li>替换：replace<ul>
+<li><code>replace(int pos, int count, string|char*|char s)</code> 替换指定范围内容，实际操作时发现：如果用的是char来替换，还需要在count后增加一个参数count2，为用来替换的长度</li>
+</ul>
+</li>
+<li>复制与交换：copy, swap<ul>
+<li><code>copy(string|char*  dest,  int  pos,  int count)</code> 将子串复制到目标对象</li>
+<li><code>swap(string other)</code> 与 other 交换内容</li>
+</ul>
+</li>
+<li>数值转换（C++11）：stoi, stod</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">length</span>() - <span class="number">2</span>; i++)&#123;</span><br><span class="line">    cout&lt;&lt; s[i];</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">- 如果只输入了一个字符，输出将会出现很长的乱码，因为s.<span class="built_in">length</span>()返回的是无符号整数，如果在减<span class="number">2</span>之后变成负数，会自动转换成对应的无符号整数（值很大），所以会输出乱码。</span><br><span class="line">```<span class="function">cpp</span></span><br><span class="line"><span class="function"><span class="title">for</span> <span class="params">(<span class="keyword">auto</span> c : s)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 对 c 进行操作</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">    <span class="type">char</span> c = s[i];</span><br><span class="line">    <span class="comment">// 使用 c</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>for (auto c : s)是 C++11 引入的基于范围的 for 循环，用于遍历容器或数组中的所有元素。</li>
+</ul>
+<h1 id="数据抽象和类"><a href="#数据抽象和类" class="headerlink" title="数据抽象和类"></a>数据抽象和类</h1><h2 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h2><p>抽象数据类型（Abstract Data Type，简称 ADT）是计算机科学中一个非常核心的概念。它的核心思想是<strong>封装</strong>和<strong>信息隐藏</strong>。描述内容包括：</p>
+<ul>
+<li>属性（property） - 关于事物数据特征</li>
+<li>方法（method）- 关于事物的行为与操作特征</li>
+</ul>
+<h3 id="ADT-的两个关键层面"><a href="#ADT-的两个关键层面" class="headerlink" title="ADT 的两个关键层面"></a>ADT 的两个关键层面</h3><p>一个 ADT 由两个部分组成，这体现了“接口”与“实现”的分离：</p>
+<ol>
+<li><p><strong>接口&#x2F;规范&#x2F;声明 (Interface)</strong></p>
+<ul>
+<li>定义了该类型数据的<strong>取值范围</strong>（比如“栈”里只能存整数）和<strong>可执行的操作</strong>（比如“入栈”、“出栈”）。</li>
+<li>这是用户唯一需要关心的部分。</li>
+</ul>
+</li>
+<li><p><strong>实现 (Implementation)</strong></p>
+<ul>
+<li>为了完成接口定义的功能，在计算机内部所采用的<strong>具体存储结构</strong>（如数组或链表）和<strong>算法</strong>。</li>
+<li>这部分对用户是隐藏的，是“黑盒”。</li>
+</ul>
+</li>
+</ol>
+<p>声明和实现分离使得模块之间仅通过接口（头文件）通信，内部实现细节互不可见，降低了模块间的依赖关系，使得代码更灵活、更易维护。</p>
+<h3 id="ADT-与数据结构的关系"><a href="#ADT-与数据结构的关系" class="headerlink" title="ADT 与数据结构的关系"></a>ADT 与数据结构的关系</h3><ul>
+<li><strong>抽象数据类型 (ADT)</strong>：是<strong>逻辑层面</strong>的概念，是“蓝图”或“规范”。</li>
+<li><strong>数据结构 (Data Structure)</strong>：是<strong>物理层面</strong>的概念，是“具体建筑”或“实现”。</li>
+</ul>
+<p>同一个 ADT（如“栈”），可以用不同的数据结构（如“数组”或“链表”）来实现。选择哪种数据结构，取决于你对性能（时间&#x2F;空间复杂度）的具体需求。</p>
+<h2 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">类关键词  类标识符 &#123;</span><br><span class="line">    访问说明符:（可选）</span><br><span class="line">        数据成员声明序列;</span><br><span class="line">        函数成员声明序列;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类关键词：class或struct或union之一</li>
+<li>访问说明符：<ul>
+<li>public 公有，表示后续成员是对象使用者可访问</li>
+<li>private 私有，表示后续成员仅对象内部可访问</li>
+<li>protected 受保护，本类内部和派生类（子类）内部可以访问</li>
+<li>不写的时候默认是private</li>
+</ul>
+</li>
+<li>类成员：<ul>
+<li>数据成员，按声明顺序存储，对齐规则同C。一般设计中，数据成员需要隐藏保护。需要通过函数成员访问。</li>
+<li>函数成员，公有成员可以被外部使用者访问；私有成员仅内部访问；const 函数成员不能修改数据成员。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DATE</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">Set</span><span class="params">( <span class="type">int</span>, <span class="type">int</span>, <span class="type">int</span> )</span></span>;</span><br><span class="line">        <span class="function"><span class="type">int</span> <span class="title">getMonth</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">        <span class="function"><span class="type">int</span> <span class="title">getDay</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">        <span class="function"><span class="type">int</span> <span class="title">getYear</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">Print</span><span class="params">()</span> <span class="type">const</span></span>; <span class="comment">//这就是const函数，不能修改数据成员</span></span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">Increment</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">Decrement</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="type">int</span> month;</span><br><span class="line">        <span class="type">int</span> day;</span><br><span class="line">        <span class="type">int</span> year;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>const成员函数：表示该函数不会修改对象的任何成员变量（除了被声明为 mutable的变量）。const是函数签名的一部分。带 const和不带 const被视为两个不同的函数。头文件（.h）中的函数声明带有 const修饰符，在源文件（.cpp）中的函数定义也必须有 const。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">getLength</span><span class="params">()</span> <span class="type">const</span></span>;   <span class="comment">//在.h文件中</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Rectangle::getLength</span><span class="params">()</span> <span class="type">const</span> </span>&#123;  <span class="comment">// 在.cpp文件中</span></span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在C++中，如果类的成员函数的参数名与类的成员变量名相同，需要使用 this指针​ 或 成员初始化列表​ 来区分和正确赋值。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> value; <span class="comment">// 成员变量</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 构造函数：参数名与成员变量名相同，都是 value</span></span><br><span class="line">    <span class="built_in">MyClass</span>(<span class="type">int</span> value) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;value = value; <span class="comment">// 用 this-&gt; 指明左侧是成员变量</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setValue</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;value = value; <span class="comment">// 赋值给成员变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="struct和class关键字"><a href="#struct和class关键字" class="headerlink" title="struct和class关键字"></a>struct和class关键字</h3><p>C 语言：</p>
+<ul>
+<li>在纯粹的C89&#x2F;C99标准C语言中，struct只能包含成员变量（数据），不能直接包含成员函数（操作）的定义。导致数据与操作的函数分离。</li>
+<li>结构体类型名称是 struct identifer</li>
+</ul>
+<p>C++：</p>
+<ul>
+<li>类关键包括 class，struct，union，除了可以包含成员变量，还可以包含成员函数</li>
+<li>类型名称就是标识符，是 xxx 不是 struct xxx</li>
+<li>struct 定义的类成员默认是公有的</li>
+<li>class 定义的类成员默认是私有的。除此之外，class 和 struct 语法和语义没有区别</li>
+</ul>
+<h3 id="内联"><a href="#内联" class="headerlink" title="内联"></a>内联</h3><p>内联是C&#x2F;C++中的一种优化机制，建议编译器将函数调用处直接替换为函数体代码，以避免函数调用的额外开销（压栈、跳转、返回等）。</p>
+<ul>
+<li>目的：用空间换时间。牺牲代码体积（可能膨胀），换取执行速度（消除调用开销）。</li>
+<li>方式：在函数声明前加关键字 inline。</li>
+<li>本质：对编译器的建议。编译器有权拒绝，最终是否内联由编译器优化策略决定。</li>
+</ul>
+<p>在类定义内直接实现的成员函数自动视为inline建议。</p>
+<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><ul>
+<li>类<ul>
+<li>是用户定义的数据类型，它表示一个 ADT。在 C++中，它有属性（数据成员）和能操作数据成员的行为（函数成员）</li>
+<li>本质上是定义一个数据类型的蓝图，或者是一个模板。并没有实际数据</li>
+</ul>
+</li>
+<li>对象<ul>
+<li>类定义的变量称为对象（objects）或者类的实例（instances）</li>
+<li>自动对象或动态申请的对象的默认初始化值为不确定。</li>
+</ul>
+</li>
+<li>客户端<ul>
+<li>使用类的软件称为客户端代码。</li>
+<li>客户端代码使用对象的公有方法去处理对象的数据。</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p>类名 对象名</p>
+<h3 id="访问成员变量和函数"><a href="#访问成员变量和函数" class="headerlink" title="访问成员变量和函数"></a>访问成员变量和函数</h3><p>在对象上使用点运算符（.）date.flag</p>
+<h2 id="函数重载-1"><a href="#函数重载-1" class="headerlink" title="函数重载"></a>函数重载</h2><p>在开发中，需要的函数功能类似，但参数数量或类型不同，C++可以声明同样名称的一组函数，但参数类型不同。<br>函数签名：编译器将函数名、参数数量、参数类型编译为唯一的内部变量名。但是不包含返回类型。例如Swap_int_int和Swap_float_float是不同的函数签名。</p>
+<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2><p>默认参数只能定义在参数右边，例如：void func(int n,float b&#x3D;1.2,char c&#x3D;‘@’)是正确的，但是void func(int n&#x3D;1,float b,char c)是错误的。</p>
+<h2 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h2><p>私有成员变量只有类和友元函数可以访问。</p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>类的构造函数是类的一种特殊的成员函数，每次创建类的新对象时完成初始化等逻辑。构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回void，在定义时前面不能写返回类型。如果用户没有自定义构造函数，则编译会自动生成一个默认构造函数。构造函数不能被直接调用。<br>构造函数可以有参数，有参数的时候初始化就需要传初始值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Line <span class="title">line</span><span class="params">(<span class="number">10.0</span>)</span><span class="comment">//初始值为10.0</span></span></span><br><span class="line"><span class="function">Line line1</span>;<span class="comment">//没有默认构造，错误</span></span><br></pre></td></tr></table></figure>
+<h2 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h2><p>析构函数是类的一类特殊成员函数，它会在对象被释放前执行。析构函数的名称与类的名称是完全相同的，只是在前面加了个波浪号（~）作为前缀，它不会返回任何值，也不能带有任何参数。析构函数不能被直接调用。它有利于跳出程序前释放资源。</p>
+<h2 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h2><p>this会指向当前对象。this-&gt;成员。<br>友元函数没有类的指针，因为友元不是类的成员，只有动态成员函数才有this指针。static成员不能使用this，静态成员是所有对象共用的，应使用类名::成员，当成员函数参数与成员数据重名时，必须用this访问成员数据。</p>
+<h2 id="类的静态成员"><a href="#类的静态成员" class="headerlink" title="类的静态成员"></a>类的静态成员</h2><p>static成员是类的组成部分但不是任何对象的组成部分，通过在成员声明前加上保留字static将成员设为static。<br>静态数据成员具有静态（全局）生存期，是类的所有对象共享的存储空间，静态数据成员不是通过构造函数初始化，而是必须在类的定义体外部再定义一次，且恰好一次。通常是在类的实现文件中再声明一次，而且此时不能再用static修饰。静态成员函数不能直接访问类的非静态成员，只能访问类的静态数据或函数成员。<br>在 C++ 中，可以在函数声明时为参数提供一个默认值 。这样在函数调用时，如果没有提供函数参数 值，则使用默认值。 出现错误error: default argument given for paramete的原因是函数声明与函数定义中均指定了默认值。解决 办法：仅在声明和定义其中一个中指定默认值</p>
+<h2 id="内存布局与对象"><a href="#内存布局与对象" class="headerlink" title="内存布局与对象"></a>内存布局与对象</h2><h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><ul>
+<li>函数实现，库实现，字符串等资源，<strong>不可改</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *s1 - <span class="string">&quot;Literal&quot;</span>; <span class="comment">//文字在代码区，仅分配了字符指针</span></span><br><span class="line"><span class="comment">// s1[0] = &#x27;I&#x27; //不能修改</span></span><br><span class="line"><span class="type">char</span> s2[] = <span class="string">&quot;Initial Literal&quot;</span>; <span class="comment">//分配数组空间</span></span><br><span class="line"><span class="comment">// s2可以被修改</span></span><br><span class="line">Point *po = &amp;((Point)&#123;<span class="number">2</span>, <span class="number">3</span>&#125;); <span class="comment">//分配结构空间且指针</span></span><br><span class="line"><span class="comment">// 取临时对象的地址给po，语句执行完毕之后临时对象就没了</span></span><br></pre></td></tr></table></figure>
+<h3 id="静态变量（对象）"><a href="#静态变量（对象）" class="headerlink" title="静态变量（对象）"></a>静态变量（对象）</h3><ul>
+<li>main执行前初始化数据</li>
+<li>用零初始化</li>
+</ul>
+<h3 id="栈（Stack）"><a href="#栈（Stack）" class="headerlink" title="栈（Stack）"></a>栈（Stack）</h3><ul>
+<li>函数参数，自动变量（对象）</li>
+</ul>
+<h3 id="堆（Heap）"><a href="#堆（Heap）" class="headerlink" title="堆（Heap）"></a>堆（Heap）</h3><ul>
+<li>动态变量（对象），由stdlib.h管理</li>
+</ul>
+<p><img   src="/image.png"  alt="alt text"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从低地址到高地址：</p>
+<ol>
+<li>代码区，存放函数代码，是只读的</li>
+<li>全局&#x2F;静态区，存放数据（字符串字面量、已初始化&#x2F;未初始化的全局变量和静态变量）</li>
+<li>堆区，程序员手动分配</li>
+<li>栈区，编译器自动管理的函数被调用时的局部变量，函数返回时这些变量自动销毁</li>
+</ol>
+<ul>
+<li>上述代码里的<code>s1</code>指向的字符串字面量在静态区，不可修改，<code>s2</code>整个数组在栈上，它的内容是”Initial Literal”的一个副本。</li>
+</ul>
+<h2 id="C语言动态对象管理"><a href="#C语言动态对象管理" class="headerlink" title="C语言动态对象管理"></a>C语言动态对象管理</h2><ul>
+<li>必须<code>#include&lt;stdlib.h&gt;</code></li>
+<li>申请空间<code>void * malloc(size_t)</code></li>
+<li>释放空间<code>void free(void *)</code></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Point *p1 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Point) * <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">Point (*p2)[<span class="number">2</span>][<span class="number">3</span>] = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Point) * <span class="number">6</span>);</span><br><span class="line"><span class="comment">//指向2*3数组的指针</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n = <span class="number">2</span>, m = <span class="number">3</span>;</span><br><span class="line">Point **p3 = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Point*) * n);</span><br><span class="line"><span class="comment">//指针的指针</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    p3[i] = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Point) * m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">free</span>(p1);</span><br><span class="line"><span class="built_in">free</span>(p2);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    <span class="built_in">free</span>(p3[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">free</span>(p3);<span class="comment">//先释放行数组，再释放指针的指针</span></span><br></pre></td></tr></table></figure>
+<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><h3 id="new运算符的使用"><a href="#new运算符的使用" class="headerlink" title="new运算符的使用"></a>new运算符的使用</h3><ol>
+<li><strong>指针 &#x3D; new 类型名</strong></li>
+<li><strong>指针 &#x3D; new 类型名(初始化参数)</strong></li>
+<li><strong>指针 &#x3D; new 类型名[数组长度]</strong></li>
+</ol>
+<ul>
+<li>类型可以为基本类型，也可以为类(class)类型，如果为类，则初始化参数相当于将实际参数传递给该类的构造函数。</li>
+<li>new运算符返回一个该类型的指针，指向分配到的内存空间</li>
+<li>若内存分配失败，抛出异常，不是NULL</li>
+</ul>
+<h3 id="delete运算符"><a href="#delete运算符" class="headerlink" title="delete运算符"></a>delete运算符</h3><ol>
+<li><strong>delete 变量名</strong></li>
+<li><strong>delete[] 数组名</strong></li>
+</ol>
+<ul>
+<li>如果分配了数组但是用<code>delete p</code>的方式释放，没有用<code>[]</code>，会导致分配的数组没有完全释放</li>
+<li>释放之后指针仍然指向原来的地址，但指针已无效，重复释放将出错</li>
+<li>delete对象指针会调用该对象的析构函数</li>
+</ul>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>指new的空间失去了指针或引用永远无法释放，导致资源耗尽。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="keyword">new</span> <span class="built_in">int</span>(<span class="number">7</span>);</span><br><span class="line">p = <span class="literal">nullptr</span>; <span class="comment">// 内存泄漏</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> *p = <span class="keyword">new</span> <span class="built_in">int</span>(<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//离开作用域，指针没有了，内存泄漏</span></span><br></pre></td></tr></table></figure>
+<h2 id="显式定义默认函数"><a href="#显式定义默认函数" class="headerlink" title="显式定义默认函数"></a>显式定义默认函数</h2><p>当我们声明有参构造函数时，编译器不会创建默认构造函数。<code>=default</code>是令编译器为某个类生成特殊成员函数或比较运算符的显式指令（C++11）。特殊成员函数包括：</p>
+<ul>
+<li>默认构造函数<code>T()</code></li>
+<li>析构函数<code>~T()</code></li>
+<li>拷贝构造函数<code>T(const T&amp;)</code></li>
+<li>赋值运算<code>operator=(const T&amp;)</code></li>
+</ul>
+<p><code>=default</code>必须在1函数声明后，让编译创建该构造函数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">A</span>(<span class="type">int</span> x)&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;This is a parameterized constructor&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">A</span>() = <span class="keyword">default</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="弃置函数"><a href="#弃置函数" class="headerlink" title="弃置函数"></a>弃置函数</h2><p>在 C++ 中，<code>=delete</code> 是一个用于<strong>显式禁止</strong>某个函数被调用的语法特性。你可以把它理解为给函数贴上一个“<strong>禁止通行</strong>”的标签。一旦某个函数被标记为 <code>=delete</code>，任何尝试调用它的代码都会在<strong>编译期</strong>直接报错，从而有效防止误用。</p>
+<p>请注意，删除的函数是隐式内联的，这一点非常重要。删除的函数定义必须是函数的<strong>首次声明</strong>。</p>
+<h2 id="成员初始化器"><a href="#成员初始化器" class="headerlink" title="成员初始化器"></a>成员初始化器</h2><p>在 C++ 中，“成员初始化器”通常指的是<strong>构造函数初始化列表</strong>。是一种在构造函数体执行<strong>之前</strong>，直接初始化类成员变量的语法机制。</p>
+<h3 id="📝-语法结构"><a href="#📝-语法结构" class="headerlink" title="📝 语法结构"></a>📝 语法结构</h3><p>成员初始化器位于构造函数的参数列表之后，构造函数体之前，以冒号 <code>:</code> 开头，后面跟着一系列以逗号分隔的成员初始化项。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    std::string name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 构造函数</span></span><br><span class="line">    <span class="comment">// x(a) 和 name(n) 就是成员初始化器</span></span><br><span class="line">    <span class="built_in">MyClass</span>(<span class="type">int</span> a, <span class="type">const</span> std::string&amp; n) : <span class="built_in">x</span>(a), <span class="built_in">name</span>(n) &#123;</span><br><span class="line">        <span class="comment">// 构造函数体</span></span><br><span class="line">        y = <span class="number">0</span>; <span class="comment">// 这是在函数体内赋值，不是初始化</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🚀-为什么要使用成员初始化器？"><a href="#🚀-为什么要使用成员初始化器？" class="headerlink" title="🚀 为什么要使用成员初始化器？"></a>🚀 为什么要使用成员初始化器？</h3><p>使用成员初始化器主要有两大理由：<strong>性能优化</strong>和<strong>强制需求</strong>。</p>
+<h4 id="1-性能优化（避免“先构造再赋值”）"><a href="#1-性能优化（避免“先构造再赋值”）" class="headerlink" title="1. 性能优化（避免“先构造再赋值”）"></a>1. 性能优化（避免“先构造再赋值”）</h4><p>如果你在构造函数体内使用赋值操作（例如 <code>x = a;</code>），对于非内置类型（如 <code>std::string</code> 或自定义类），编译器会执行以下步骤：</p>
+<ol>
+<li><strong>默认构造</strong>：先调用成员的默认构造函数（例如创建一个空字符串）。</li>
+<li><strong>赋值</strong>：再调用赋值运算符，将新值赋给它。</li>
+</ol>
+<p>这相当于做了两次工作。而使用<strong>成员初始化器</strong>，编译器会直接调用带参数的构造函数进行初始化，<strong>只执行一次</strong>，效率更高。</p>
+<h4 id="2-强制需求（必须使用的情况）"><a href="#2-强制需求（必须使用的情况）" class="headerlink" title="2. 强制需求（必须使用的情况）"></a>2. 强制需求（必须使用的情况）</h4><p>在以下三种情况下，你<strong>必须</strong>使用成员初始化器，否则代码无法通过编译：</p>
+<ul>
+<li><strong><code>const</code> 成员变量</strong>：常量一旦创建就不能被修改，因此必须在创建时（即初始化阶段）赋值，不能在函数体内赋值。</li>
+<li><strong>引用成员变量</strong>：引用必须在定义时绑定到一个有效的对象，不能先定义空引用再赋值。</li>
+<li><strong>没有默认构造函数的类成员</strong>：如果成员是一个类对象，且该类没有默认构造函数（即必须传参才能构造），则必须在初始化列表中显式传递参数。</li>
+</ul>
+<h3 id="⚠️-关键陷阱：初始化顺序"><a href="#⚠️-关键陷阱：初始化顺序" class="headerlink" title="⚠️ 关键陷阱：初始化顺序"></a>⚠️ 关键陷阱：初始化顺序</h3><p>这是一个非常容易被忽视但至关重要的规则：</p>
+<p><strong>成员的初始化顺序，完全取决于它们在类中声明的顺序，而与初始化列表中书写的顺序无关。</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">int</span> b;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 看起来是先初始化 b，再初始化 a</span></span><br><span class="line">    <span class="comment">// 但实际上：a 先被初始化（因为它在类中先声明），b 后被初始化</span></span><br><span class="line">    <span class="built_in">Example</span>(<span class="type">int</span> val) : <span class="built_in">b</span>(val), <span class="built_in">a</span>(b) &#123; </span><br><span class="line">        <span class="comment">// 此时 a 的值是未定义的！因为 b 还没初始化，a 就尝试用 b 的值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>为了保证代码的可读性和避免逻辑错误，<strong>初始化列表中的书写顺序最好与类成员声明的顺序保持一致</strong>。</p>
+<h2 id="对象成员初始化器"><a href="#对象成员初始化器" class="headerlink" title="对象成员初始化器"></a>对象成员初始化器</h2><p>一句话说清：<br><strong>对象成员初始化器</strong>就是在创建对象时，用 <code>{}</code> 直接给成员变量赋值的语法糖。</p>
+<blockquote>
+<p><strong>语法糖（Syntactic Sugar）</strong>，又称糖衣语法，是由英国计算机科学家彼得·约翰·兰达提出的术语，指编程语言中添加的简化语法结构。这类语法不改变语言功能，但能提升代码可读性并减少错误率，例如C语言中a[i]等价于指针表达式*(a+i)。</p>
+</blockquote>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>假设有个类：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="type">int</span> id;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>用<strong>对象成员初始化器</strong>创建对象：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student s = &#123;<span class="number">1001</span>, <span class="string">&quot;张三&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student s&#123;<span class="number">1001</span>, <span class="string">&quot;张三&quot;</span>&#125;; <span class="comment">// C++11 统一初始化</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="类数组"><a href="#类数组" class="headerlink" title="类数组"></a>类数组</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="type">int</span> id;</span><br><span class="line">    string name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类数组，直接用 &#123;&#125; 初始化每个对象</span></span><br><span class="line">Student arr[] = &#123;</span><br><span class="line">    &#123;<span class="number">101</span>, <span class="string">&quot;小明&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="number">102</span>, <span class="string">&quot;小红&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="number">103</span>, <span class="string">&quot;小李&quot;</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Student arr[] &#123;</span><br><span class="line">    &#123;<span class="number">101</span>, <span class="string">&quot;小明&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="number">102</span>, <span class="string">&quot;小红&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="number">103</span>, <span class="string">&quot;小李&quot;</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>只要你的类&#x2F;结构体满足：</p>
+<ul>
+<li>没有<strong>自定义构造函数</strong></li>
+<li>没有 <code>private</code> 成员（或成员可访问）</li>
+<li>是简单的聚合类（aggregate）</li>
+</ul>
+<p>就可以用 <strong>对象成员初始化器</strong> 初始化数组。</p>
+<h3 id="与new结合"><a href="#与new结合" class="headerlink" title="与new结合"></a>与new结合</h3><p>申请数组：<code>new 类型[]{初始化列表}</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p;</span><br><span class="line"><span class="type">int</span> Length, i;</span><br><span class="line"></span><br><span class="line">cin &gt;&gt; Length;</span><br><span class="line">p = <span class="keyword">new</span> <span class="type">int</span>[Length]&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>用new给类分配内存时：</p>
+<ul>
+<li>如果后面没有初始化列表，会调用无参构造（若为默认生成的无参构造，会初始化为不确定值）</li>
+<li>常数初始化列表（<code>int[]</code>、<code>double[]</code>），用初始化列表赋值，元素不够时，后边补0。例如上述代码中<code>Length</code>大于3时。</li>
+<li>如果是类类型数组，不够 → 剩余元素用 默认构造函数（无参构造）初始化。</li>
+<li>如果给数组用了对象成员初始化器，数组所需的参数长度小于初始化序列长度，则抛出异常</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>按<strong>成员声明顺序</strong>赋值</li>
+<li>适合简单结构体、类</li>
+</ul>
+<h2 id="nullptr"><a href="#nullptr" class="headerlink" title="nullptr"></a>nullptr</h2><p>在现代 C++ (C++11 及以后) 中，<code>nullptr</code> 和 <code>NULL</code> 的核心区别在于<strong>类型安全</strong>。<code>nullptr</code> 是专门用于表示空指针的关键字，而 <code>NULL</code> 是一个代表整数值 0 的宏，容易在特定场景下引发歧义。</p>
+
+                    
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                程序设计II笔记
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                2026/04/13/程序设计II笔记/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    Author
+                </div>
+                <div class="content">Seanoll</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    Published
+                </div>
+                <div class="content">2026-04-13 12:48</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    License
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="Copy copyright info" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="Share to WeChat"
+            data-tooltip-img-tip="Scan by WeChat"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="Share to WeiBo"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/04/04/3DGS%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/"
+                                   title="3DGS代码解读"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">3DGS代码解读</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="giscus-comments-container">
+        <div class="giscus" id="giscus"></div>
+        <script 
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          if (!window.KeepCommentPlugin?.getGiscusTheme) {
+            window.KeepCommentPlugin.getGiscusTheme = () => {
+              return document.documentElement.classList.contains('dark-mode') ? 'dark_dimmed' : 'light_tritanopia'
+            }
+          }
+
+          if (!window.KeepCommentPlugin?.changeGiscusTheme) {
+            window.KeepCommentPlugin.changeGiscusTheme = () => {
+              const iframe = document.querySelector('iframe.giscus-frame')
+              iframe && iframe.contentWindow.postMessage({
+                giscus: {
+                  setConfig: {
+                    theme: window.KeepCommentPlugin.getGiscusTheme()
+                  }
+                }
+              }, 'https://giscus.app')
+            }
+          }
+
+          if (!window.KeepCommentPlugin?.initGiscus) {
+            window.KeepCommentPlugin.initGiscus = () => {
+              const script = document.createElement('script')
+              script.async = true
+              script.src = 'https://giscus.app/client.js'
+              script.setAttribute('data-repo', 'Seanoll/hexo_site_comments')
+              script.setAttribute('data-repo-id', 'R_kgDORRWq5g')
+              script.setAttribute('data-category', 'Announcements')
+              script.setAttribute('data-category-id', 'DIC_kwDORRWq5s4C2oDI')
+              script.setAttribute('data-reactions-enabled', '0')
+              script.setAttribute('data-lang', 'en')
+              script.setAttribute('data-mapping', 'pathname')
+              script.setAttribute('data-strict', '0')
+              script.setAttribute('data-emit-metadata', '0')
+              script.setAttribute('data-input-position', 'top')
+              script.setAttribute('crossorigin', 'anonymous')
+              script.setAttribute('loading', 'lazy')
+              script.setAttribute('data-theme', window.KeepCommentPlugin.getGiscusTheme())
+              document.querySelector('.giscus-comments-container').appendChild(script)
+              script.onerror = () => {
+                window.KeepCommentPlugin.loadFailHandle()
+              }
+              script.onload = () => {
+                window.KeepCommentPlugin.hideLoading()
+              }
+              const toggleThemeBtn = document.querySelector('.tool-toggle-theme-mode')
+              toggleThemeBtn && toggleThemeBtn.addEventListener('click', () => {
+                window.KeepCommentPlugin.changeGiscusTheme()
+              })
+            }
+          }
+
+          if ('false' === "true") {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initGiscus()
+            }, 1000)
+          } else {
+            window.addEventListener("DOMContentLoaded", window.KeepCommentPlugin.initGiscus)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#from-C-to-C"><span class="nav-text">from C to C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E6%88%90%E7%BB%A9"><span class="nav-text">课程成绩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%8E%86%E5%8F%B2"><span class="nav-text">C++历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io%E6%B5%81"><span class="nav-text">io流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E5%AF%B9%E8%B1%A1"><span class="nav-text">初识对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-text">运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E6%8E%A7%E5%88%B6"><span class="nav-text">1. 基础控制 (&lt;iostream&gt;)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A0%BC%E5%BC%8F%E6%8E%92%E7%89%88"><span class="nav-text">2. 格式排版 (&lt;iomanip&gt;)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%A0%B8%E5%BF%83%E5%8F%A3%E8%AF%80"><span class="nav-text">3. 核心口诀</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constexpr"><span class="nav-text">constexpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-text">命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 核心概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">基本语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-text">作为函数返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8C%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-text">使用C标准库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const%E5%92%8Cconstexpr"><span class="nav-text">const和constexpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#auto"><span class="nav-text">auto</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string%E7%B1%BB"><span class="nav-text">string类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E7%B1%BB"><span class="nav-text">初识类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAstring%E5%AF%B9%E8%B1%A1"><span class="nav-text">创建string对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-text">string对象的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string%E5%AF%B9%E8%B1%A1%E6%93%8D%E4%BD%9C"><span class="nav-text">string对象操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%B1%BB"><span class="nav-text">数据抽象和类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ADT-%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%85%B3%E9%94%AE%E5%B1%82%E9%9D%A2"><span class="nav-text">ADT 的两个关键层面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ADT-%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">ADT 与数据结构的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-text">类的声明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#struct%E5%92%8Cclass%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">struct和class关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E8%81%94"><span class="nav-text">内联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-text">类与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">访问成员变量和函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD-1"><span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-text">访问控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this%E6%8C%87%E9%92%88"><span class="nav-text">this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="nav-text">类的静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-text">内存布局与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-text">正文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%EF%BC%88%E5%AF%B9%E8%B1%A1%EF%BC%89"><span class="nav-text">静态变量（对象）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%EF%BC%88Stack%EF%BC%89"><span class="nav-text">栈（Stack）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%EF%BC%88Heap%EF%BC%89"><span class="nav-text">堆（Heap）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E7%AE%A1%E7%90%86"><span class="nav-text">C语言动态对象管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C"><span class="nav-text">C++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#new%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">new运算符的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">delete运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="nav-text">内存泄漏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E5%BC%8F%E5%AE%9A%E4%B9%89%E9%BB%98%E8%AE%A4%E5%87%BD%E6%95%B0"><span class="nav-text">显式定义默认函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%83%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-text">弃置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8"><span class="nav-text">成员初始化器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%93%9D-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="nav-text">📝 语法结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8%EF%BC%9F"><span class="nav-text">🚀 为什么要使用成员初始化器？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E9%81%BF%E5%85%8D%E2%80%9C%E5%85%88%E6%9E%84%E9%80%A0%E5%86%8D%E8%B5%8B%E5%80%BC%E2%80%9D%EF%BC%89"><span class="nav-text">1. 性能优化（避免“先构造再赋值”）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%BA%E5%88%B6%E9%9C%80%E6%B1%82%EF%BC%88%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%89"><span class="nav-text">2. 强制需求（必须使用的情况）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%A0%EF%B8%8F-%E5%85%B3%E9%94%AE%E9%99%B7%E9%98%B1%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%BA%E5%BA%8F"><span class="nav-text">⚠️ 关键陷阱：初始化顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8"><span class="nav-text">对象成员初始化器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B"><span class="nav-text">举例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%95%B0%E7%BB%84"><span class="nav-text">类数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Enew%E7%BB%93%E5%90%88"><span class="nav-text">与new结合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nullptr"><span class="nav-text">nullptr</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2025</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Seanoll</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/">
+            
+            This site is deployed on <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span>
+            
+                </a>
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">Total words</span>
+                    <span class="item-value border-box word">21.7k</span>
+                </span>
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#from-C-to-C"><span class="nav-text">from C to C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E6%88%90%E7%BB%A9"><span class="nav-text">课程成绩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E5%8E%86%E5%8F%B2"><span class="nav-text">C++历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io%E6%B5%81"><span class="nav-text">io流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E5%AF%B9%E8%B1%A1"><span class="nav-text">初识对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-text">运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E6%8E%A7%E5%88%B6"><span class="nav-text">1. 基础控制 (&lt;iostream&gt;)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A0%BC%E5%BC%8F%E6%8E%92%E7%89%88"><span class="nav-text">2. 格式排版 (&lt;iomanip&gt;)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%A0%B8%E5%BF%83%E5%8F%A3%E8%AF%80"><span class="nav-text">3. 核心口诀</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constexpr"><span class="nav-text">constexpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-text">命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 核心概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">基本语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-text">作为函数返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8C%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-text">使用C标准库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const%E5%92%8Cconstexpr"><span class="nav-text">const和constexpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#auto"><span class="nav-text">auto</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string%E7%B1%BB"><span class="nav-text">string类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%AF%86%E7%B1%BB"><span class="nav-text">初识类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAstring%E5%AF%B9%E8%B1%A1"><span class="nav-text">创建string对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-text">string对象的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string%E5%AF%B9%E8%B1%A1%E6%93%8D%E4%BD%9C"><span class="nav-text">string对象操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%B1%BB"><span class="nav-text">数据抽象和类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ADT-%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%85%B3%E9%94%AE%E5%B1%82%E9%9D%A2"><span class="nav-text">ADT 的两个关键层面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ADT-%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">ADT 与数据结构的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-text">类的声明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#struct%E5%92%8Cclass%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">struct和class关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E8%81%94"><span class="nav-text">内联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-text">类与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">访问成员变量和函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD-1"><span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-text">访问控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this%E6%8C%87%E9%92%88"><span class="nav-text">this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="nav-text">类的静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="nav-text">内存布局与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-text">正文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%EF%BC%88%E5%AF%B9%E8%B1%A1%EF%BC%89"><span class="nav-text">静态变量（对象）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%EF%BC%88Stack%EF%BC%89"><span class="nav-text">栈（Stack）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%EF%BC%88Heap%EF%BC%89"><span class="nav-text">堆（Heap）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E7%AE%A1%E7%90%86"><span class="nav-text">C语言动态对象管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C"><span class="nav-text">C++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#new%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">new运算符的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">delete运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="nav-text">内存泄漏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E5%BC%8F%E5%AE%9A%E4%B9%89%E9%BB%98%E8%AE%A4%E5%87%BD%E6%95%B0"><span class="nav-text">显式定义默认函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%83%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-text">弃置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8"><span class="nav-text">成员初始化器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%93%9D-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="nav-text">📝 语法结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8%EF%BC%9F"><span class="nav-text">🚀 为什么要使用成员初始化器？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E9%81%BF%E5%85%8D%E2%80%9C%E5%85%88%E6%9E%84%E9%80%A0%E5%86%8D%E8%B5%8B%E5%80%BC%E2%80%9D%EF%BC%89"><span class="nav-text">1. 性能优化（避免“先构造再赋值”）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%BA%E5%88%B6%E9%9C%80%E6%B1%82%EF%BC%88%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%89"><span class="nav-text">2. 强制需求（必须使用的情况）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%A0%EF%B8%8F-%E5%85%B3%E9%94%AE%E9%99%B7%E9%98%B1%EF%BC%9A%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%BA%E5%BA%8F"><span class="nav-text">⚠️ 关键陷阱：初始化顺序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%88%90%E5%91%98%E5%88%9D%E5%A7%8B%E5%8C%96%E5%99%A8"><span class="nav-text">对象成员初始化器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B"><span class="nav-text">举例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%95%B0%E7%BB%84"><span class="nav-text">类数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Enew%E7%BB%93%E5%90%88"><span class="nav-text">与new结合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-text">特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nullptr"><span class="nav-text">nullptr</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
