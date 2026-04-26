@@ -9,7 +9,7 @@
     
     <title>
         
-            build_blog |
+            AI浅谈 |
         
         Seanoll
     </title>
@@ -223,7 +223,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        build_blog
+                        AI浅谈
                     </div>
                 
 
@@ -249,26 +249,17 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-02-12 12:00:32</span>
+                <span class="datetime">2026-04-26 00:55:37</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Fri Apr 03 2026 12:37:42 GMT+0800">2026-04-03 12:37:42</span>
+                    <span class="datetime" data-updated="Sun Apr 26 2026 20:48:07 GMT+0800">2026-04-26 20:48:07</span>
                 </span>
             
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/learning/">learning</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -276,12 +267,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>574 Words</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.8k Words</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>6 Mins</span>
             </span>
         
         
@@ -303,51 +294,20 @@
                     
 
                     
-                         <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>安装Node.js</li>
-<li>安装Git</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git -v</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><ul>
-<li>安装Hexo</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<ul>
-<li>初始化博客</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建并进入文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line"><span class="comment"># 初始化 Hexo</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<ul>
-<li>本地预览</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><ul>
-<li>创建Github仓库，名字为：你的Github用户名.github.io</li>
-<li>配置Hexo部署信息，打开本地博客根目录下的 _config.yml文件，找到最底部的 deploy字段</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">   <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">   <span class="attr">repo:</span> <span class="string">git@github.com:Seanoll/seanoll.github.io.git</span></span><br><span class="line">   <span class="comment"># ssh连接比http快，也可用：</span></span><br><span class="line">   <span class="comment"># repo: https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git</span></span><br><span class="line">   <span class="attr">branch:</span> <span class="string">master</span> </span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装部署插件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<ul>
-<li>回到Github仓库页面，点击Settings -&gt; Pages， 在 Source下拉菜单中，选择 Deploy from a branch，然后选择刚才配置的分支（如 main或 master），点击 Save</li>
-</ul>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ul>
-<li>在Hexo官网或者Github上找主题，下载到themes文件夹或者<code>git clone</code> </li>
-<li>在博客根目录下的_config.yml中下拉找到theme改为<code>theme: 什么名字</code></li>
-<li>在主题的source文件夹里修改配置文件</li>
-<li>使用<code>hexo new 文章名</code>来新建一篇文章，找到并编辑它，写好之后保存</li>
-<li>使用<code>hexo new page 网页名</code>来新建一张页面</li>
-<li>使用<code>hexo g</code>来生成相应的文件，使用<code>hexo d</code>部署更新到网站上</li>
-</ul>
-<h2 id="在配置过程中出现版本问题"><a href="#在配置过程中出现版本问题" class="headerlink" title="在配置过程中出现版本问题"></a>在配置过程中出现版本问题</h2><ul>
-<li>在命令行里无法删除一个文件夹<code>Permission Denied</code>可能是因为该文件夹在图形化界面中打开。</li>
-<li><code>hexo init</code>必须初始化一个空文件夹，如果已经删干净了还是提示有文件，使用<code>ls -a</code>来查看隐藏文件并删除。 </li>
-<li><code>git clone</code>或者<code>wget</code>和<code>curl</code>速度太慢时，将网络代理设置成全局模式。</li>
-<li>在 YAML 中，冒号 :后面必须有一个空格。<code>branch:master</code>应该写为 <code>branch: master</code>。非末尾的后大括号后面需要加逗号,。</li>
-<li>安装新版nodejs：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 nvm（如果还没安装）</span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重新打开终端，然后安装 Node.js 20</span></span><br><span class="line">nvm install 20</span><br><span class="line">nvm use 20</span><br><span class="line"><span class="comment"># 设置为默认版本</span></span><br><span class="line">nvm <span class="built_in">alias</span> default 20</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 验证版本</span></span><br><span class="line">node -v  <span class="comment"># 应该显示 20.x.x </span></span><br></pre></td></tr></table></figure>
+                         <p>从ChatGPT爆火开始，人工智能成为了新的风口，发展速度之快令人咋舌。有人说，生产工具的发展会催生新的就业岗位，但目前来看，人工智能导致了互联网行业更加严重的裁员。在大学里，我听到了很多新的概念，但也是迷迷糊糊一知半解，在OpenClaw爆火的时候，我也懒得折腾。但是当我真的亲眼看到现在Agent的能力时，还是会为之惊叹，对于新技术，在头脑里揣测100次，也不如亲手体验1次，如果懒得自己操作，也一定要亲眼看看它的效果，尤其是在线下。</p>
+<p>现在各行各业都要AI赋能，虽然感觉更多是一群不懂技术的领导拍脑袋的决定，但是不得不说AI确实有这个能力，它确实能提高各个领域各个环节的效率。从K12教育到高等教育都在想方设法地往课堂里结合AI，我为什么选择了人工智能与大数据呢？因为我觉得未来人工智能将会成为通识，正如程序设计这门课一样。掌握了使用更高效的工具的方法，带来的好处不仅在于就业方面，更在于综合素质。</p>
+<p>作为计算机专业的学生，接触到名词很多，所以我想梳理一下AI的基础概念。这里参考了<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1E7wtzaEdq/" >从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！<i class="fas fa-external-link-alt"></i></a>和<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1zSDMBUE5o/" >近年AI应用技术串讲与优质文档分享｜Agent、Skill、OpenClaw、Harness……<i class="fas fa-external-link-alt"></i></a>，都是很高质量的视频，推荐。</p>
+<p><strong>LLM</strong>：Large Language Model，大语言模型，简称大模型。这是AI浪潮的基础，也是大家最熟悉的一个概念，GPT，Gemini，DeepSeek都是大语言模型，我更愿意把它比作一个函数，它能够接受我们输入的文字，输出回答。它的工作方式是根据你输入的提示词，预测下一个最合理的字词，这句话其实也反映了它是数据驱动的，是经验性的，大语言模型的能力强，是人类在信息时代产生了大量可供学习的语料的结果。</p>
+<p><strong>token</strong>：词元。现在人们经常说花了多少token，就像说一个货币单位一样，但是实际上它是大模型处理文本的最小单位。大模型实际上是一个数学函数，在用户输入问题后，先把文字切割成一个个token，再把token转换成数字，一句话就这样变成了一个向量，我们经常看到由几层小圆圈相互交织连接成的神经网络示意图，这看起来非常高深，但是实际上这些小圆圈就是线性代数里的矩阵运算，交织在一起的神经网络就是多进行了几层计算。经过计算之后，模型得到了一个数字，这就是一个token，再把这个token转换成文字，回答就完整了一点。</p>
+<p><strong>context</strong>：上下文。从字面上来看，它指的是我们与模型对话的历史记录，但不够完整，实际上它还包括了模型当前正在输出的回答，工具列表和system prompt。而context window，上下文窗口指的就是模型能够记住的上下文规模。</p>
+<p><strong>prompt</strong>：提示词。字面意思，就是你发给大模型的文字，告诉它做什么。上面说的<strong>system prompt</strong>就是在后台告诉大模型的一些规则，<strong>user prompt</strong>就是用户输入的提示词，当然这两个词不大常见。曾经很火的<strong>Prompt Engineering</strong>，提示词工程就是研究怎么写好提示词，让大模型的回答更符合要求。一段好的提示词应该包括角色、任务、背景信息、输出格式等等，比如“你是一位资深律师……”，但是用的比较少。</p>
+<p><strong>Fine-tuning</strong>：微调。在已有模型的训练基础上，用特定数据再训练，让模型更适合某个具体任务或场景。它修改模型本身的参数，需要花费很多的算力。</p>
+<p><strong>RAG</strong>：Retrieval-Augmented Generation，检索增强生成。大模型本身知识有限，当问到“今天广州的天气怎么样”或者“公司今年的年假政策是什么”这样的问题时，它无法从训练过程中学过的知识找到答案，可能会编造答案。RAG就是让大模型在回答问题时，先去资料库里找出与问题相关的片段，把检索到的内容和用户问题一起拼成提示词，基于这些提示词再去生成回答。</p>
+<p><strong>tool</strong>：工具。大语言模型明明只能处理文本，为什么还发展出如此强大的能力呢？因为它可以通过语言来调用工具，大模型本身不知道今天的新闻，它可以使用联网搜索tool，大模型不知道本地的文件，它可以调用文件操作tool，调用的时候，需要写一个含有tool名和参数的json文件，外部程序把结果返回给模型。</p>
+<p><strong>MCP</strong>：Model Context Protocol，模型上下文协议。MCP出现以前，大模型调用工具方式不一样，不同工具被调用的方式也不一样，使用工具需要写很多套适配代码，MCP就像大模型的USB-C接口，工具按照MCP去制定被调用的方式，大模型按照MCP调用工具，提供工具的那一方就叫MCP Server。</p>
+<p><strong>agent</strong>：智能体。普通的LLM无法感知或改变外部世界，只能处理文本，而agent是给LLM增加了感知、规划、记忆和工具调用的能力，让LLM充当大脑，使得AI能够自动化地执行一长串复杂任务。有一个词叫基座模型，也是LLM，虽然只有文本处理功能，但是我们微调之后，通过语言可以实现思考，也可以通过语言调用工具，所以LLM是基础。agent的定义没有那么明确，我有了一个基座模型，我可以微调让它会使用简单的工具，那它也可以叫做一个agent。不过，我们通常认为agent要实现思考 - 行动 - 观察的循环，去模拟人类完成一个任务的模式。</p>
+<p><strong>skill</strong>：技能。把一整套agent能力（prompt、多个工具、参考资料、任务流程、规则等）封装为可复用模块，从而实现低门槛分享与复用，一个skill本质上约等于一个子agent。一个skill对应着一个文件夹，包含了所需的资料和工具脚本等。在接收到任务后，agent会把所有skill的名称和描述看一遍，选择适合的skill，再把这些skill文件夹里SKILL.md里的所有内容加载到上下文里，按需使用这个skill的工具或者资产。</p>
+<p>许多老师都说，没有什么知识是你学了就一定能找到工作的。但是对技术的热爱可以支撑我们走下去。</p>
 
                     
                 </div>
@@ -358,11 +318,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                build_blog
+                AI浅谈
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2026/02/12/build-blog/
+                2026/04/26/AI浅谈/
             </div>
         </div>
 
@@ -378,7 +338,7 @@
                 <div class="type">
                     Published
                 </div>
-                <div class="content">2026-02-12 12:00</div>
+                <div class="content">2026-04-26 00:55</div>
             </div>
 
 
@@ -445,31 +405,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/"
-                                   title="学习，工作，生活与热爱"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">学习，工作，生活与热爱</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/1970/01/01/hello-world/"
-                                   title="Hello World"
+                                   href="/2026/04/24/W4terCTF2026WP/"
+                                   title="W4terCTF2026WP"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-title-item text-ellipsis">W4terCTF2026WP</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -598,7 +542,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        
     </div>
 </div>
 
@@ -801,7 +745,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        
     </div>
 </div>
 

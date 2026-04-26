@@ -9,7 +9,7 @@
     
     <title>
         
-            build_blog |
+            W4terCTF2026WP |
         
         Seanoll
     </title>
@@ -223,7 +223,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        build_blog
+                        W4terCTF2026WP
                     </div>
                 
 
@@ -249,26 +249,17 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-02-12 12:00:32</span>
+                <span class="datetime">2026-04-24 10:18:23</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Fri Apr 03 2026 12:37:42 GMT+0800">2026-04-03 12:37:42</span>
+                    <span class="datetime" data-updated="Fri Apr 24 2026 12:08:19 GMT+0800">2026-04-24 12:08:19</span>
                 </span>
             
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/learning/">learning</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -276,12 +267,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>574 Words</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>177 Words</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>1 Mins</span>
             </span>
         
         
@@ -303,51 +294,14 @@
                     
 
                     
-                         <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>安装Node.js</li>
-<li>安装Git</li>
+                         <h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="SignIn"><a href="#SignIn" class="headerlink" title="SignIn"></a>SignIn</h2><ul>
+<li>输入<code>ls</code>，发现flag，输入<code>cat flag</code>即可</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git -v</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><ul>
-<li>安装Hexo</li>
+<h1 id="OSINT"><a href="#OSINT" class="headerlink" title="OSINT"></a>OSINT</h1><ul>
+<li>在图片上发现了Zeeland 和Uden，查询得知是在荷兰，同时在N277公路上。</li>
+<li>从Zeeland沿着N277公路向南10公里找，由于图片上还有Wi和Wa两个词，找到了一个岔路口，即Middenpeelweg和Noordstraat的交界处<br> <img   src="/image-1.png"  alt="alt text"></li>
+<li>图片上有谷歌水印，在谷歌地图中找到这个岔路口，然后查看这个地方的街景，在网址里面可以看到它的经纬度（<a class="link"   target="_blank" rel="noopener" href="https://www.google.com/maps/@51.6329259,5.7476876,3a,75y,5.25h,95.9t/data=!3m7!1e1!3m5!1sIb87d0Yn2JUiNJ8uCYK1Cg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-5.902840457698332%26panoid%3DIb87d0Yn2JUiNJ8uCYK1Cg%26yaw%3D5.246833661354003!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDQyMS4wIKXMDSoASAFQAw==%EF%BC%89" >https://www.google.com/maps/@51.6329259,5.7476876,3a,75y,5.25h,95.9t/data=!3m7!1e1!3m5!1sIb87d0Yn2JUiNJ8uCYK1Cg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-5.902840457698332%26panoid%3DIb87d0Yn2JUiNJ8uCYK1Cg%26yaw%3D5.246833661354003!7i16384!8i8192?entry=ttu&amp;g_ep=EgoyMDI2MDQyMS4wIKXMDSoASAFQAw%3D%3D）<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<ul>
-<li>初始化博客</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建并进入文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line"><span class="comment"># 初始化 Hexo</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<ul>
-<li>本地预览</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><ul>
-<li>创建Github仓库，名字为：你的Github用户名.github.io</li>
-<li>配置Hexo部署信息，打开本地博客根目录下的 _config.yml文件，找到最底部的 deploy字段</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">   <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">   <span class="attr">repo:</span> <span class="string">git@github.com:Seanoll/seanoll.github.io.git</span></span><br><span class="line">   <span class="comment"># ssh连接比http快，也可用：</span></span><br><span class="line">   <span class="comment"># repo: https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git</span></span><br><span class="line">   <span class="attr">branch:</span> <span class="string">master</span> </span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装部署插件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<ul>
-<li>回到Github仓库页面，点击Settings -&gt; Pages， 在 Source下拉菜单中，选择 Deploy from a branch，然后选择刚才配置的分支（如 main或 master），点击 Save</li>
-</ul>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ul>
-<li>在Hexo官网或者Github上找主题，下载到themes文件夹或者<code>git clone</code> </li>
-<li>在博客根目录下的_config.yml中下拉找到theme改为<code>theme: 什么名字</code></li>
-<li>在主题的source文件夹里修改配置文件</li>
-<li>使用<code>hexo new 文章名</code>来新建一篇文章，找到并编辑它，写好之后保存</li>
-<li>使用<code>hexo new page 网页名</code>来新建一张页面</li>
-<li>使用<code>hexo g</code>来生成相应的文件，使用<code>hexo d</code>部署更新到网站上</li>
-</ul>
-<h2 id="在配置过程中出现版本问题"><a href="#在配置过程中出现版本问题" class="headerlink" title="在配置过程中出现版本问题"></a>在配置过程中出现版本问题</h2><ul>
-<li>在命令行里无法删除一个文件夹<code>Permission Denied</code>可能是因为该文件夹在图形化界面中打开。</li>
-<li><code>hexo init</code>必须初始化一个空文件夹，如果已经删干净了还是提示有文件，使用<code>ls -a</code>来查看隐藏文件并删除。 </li>
-<li><code>git clone</code>或者<code>wget</code>和<code>curl</code>速度太慢时，将网络代理设置成全局模式。</li>
-<li>在 YAML 中，冒号 :后面必须有一个空格。<code>branch:master</code>应该写为 <code>branch: master</code>。非末尾的后大括号后面需要加逗号,。</li>
-<li>安装新版nodejs：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 nvm（如果还没安装）</span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重新打开终端，然后安装 Node.js 20</span></span><br><span class="line">nvm install 20</span><br><span class="line">nvm use 20</span><br><span class="line"><span class="comment"># 设置为默认版本</span></span><br><span class="line">nvm <span class="built_in">alias</span> default 20</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 验证版本</span></span><br><span class="line">node -v  <span class="comment"># 应该显示 20.x.x </span></span><br></pre></td></tr></table></figure>
 
                     
                 </div>
@@ -358,11 +312,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="copyright-post-title border-box text-ellipsis">
-                build_blog
+                W4terCTF2026WP
             </div>
 
             <div class="copyright-post-link border-box text-ellipsis">
-                2026/02/12/build-blog/
+                2026/04/24/W4terCTF2026WP/
             </div>
         </div>
 
@@ -378,7 +332,7 @@
                 <div class="type">
                     Published
                 </div>
-                <div class="content">2026-02-12 12:00</div>
+                <div class="content">2026-04-24 10:18</div>
             </div>
 
 
@@ -448,14 +402,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2026/02/14/%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B7%A5%E4%BD%9C%EF%BC%8C%E7%94%9F%E6%B4%BB%E4%B8%8E%E7%83%AD%E7%88%B1/"
-                                   title="学习，工作，生活与热爱"
+                                   href="/2026/04/26/AI%E6%B5%85%E8%B0%88/"
+                                   title="AI浅谈"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">学习，工作，生活与热爱</span>
+                                        <span class="post-nav-title-item text-ellipsis">AI浅谈</span>
                                         <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
@@ -465,11 +419,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/1970/01/01/hello-world/"
-                                   title="Hello World"
+                                   href="/2026/04/13/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1II%E7%AC%94%E8%AE%B0/"
+                                   title="程序设计II笔记"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-title-item text-ellipsis">程序设计II笔记</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -598,7 +552,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SignIn"><span class="nav-text">SignIn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OSINT"><span class="nav-text">OSINT</span></a></li></ol>
     </div>
 </div>
 
@@ -801,7 +755,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo"><span class="nav-text">搭建Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">在配置过程中出现版本问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SignIn"><span class="nav-text">SignIn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OSINT"><span class="nav-text">OSINT</span></a></li></ol>
     </div>
 </div>
 
